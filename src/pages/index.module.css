@@ -8,11 +8,18 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  /* 添加背景图片 */
+  background-image: url('/img/background.jpg');
+  /* 设置背景图片填充方式 */
+  background-size: cover; /* 常用：覆盖整个区域 */
+  background-position: center; /* 常用：居中显示 */
+  background-repeat: no-repeat; /* 常用：不重复 */
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+    /* 也可以根据需要在不同屏幕尺寸下调整背景图片 */
   }
 }
 

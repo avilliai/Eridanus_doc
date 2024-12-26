@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Eridanus文档',
-  tagline: '异步bot',
+  tagline: '轻量化的onebot v11 python sdk',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -23,7 +23,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  projectName: 'Eridanus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -69,14 +69,25 @@ const config = {
       }),
     ],
   ],
-
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'tutorials', // 独立的 ID
+        path: 'tutorials', // 文件夹路径
+        routeBasePath: 'tutorials', // 访问 URL，例如 /tutorials/intro
+        sidebarPath: './sidebars.js', // 侧边栏配置文件
+        // ... 其他选项
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Eridanus文档',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -86,11 +97,18 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '文档',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar', // 指向 sidebarsTutorials.js 中的 tutorialSidebar
+            docsPluginId: 'tutorials', // 指向 id 为 tutorials 的插件实例
+            position: 'left',
+            label: '教程',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/avilliai/Eridanus',
             label: 'GitHub',
             position: 'right',
           },
@@ -113,15 +131,15 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://your-qq-group-link',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'QQ',
+                href: 'https://your-qq-group-link',
               },
               {
                 label: 'X',
-                href: 'https://x.com/docusaurus',
+                href: 'https://your-qq-group-link',
               },
             ],
           },
@@ -134,7 +152,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/avilliai/Eridanus',
               },
             ],
           },
