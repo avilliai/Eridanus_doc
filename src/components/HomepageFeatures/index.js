@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        只是一个简单的sdk，简易收发。
+        定位是sdk而非开发框架。
       </>
     ),
   },
@@ -17,16 +17,16 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        来自yirimirai的启发。尽可能以符合直觉的方式来构建onebot应用。
+        尽可能以符合直觉的方式来构建onebot应用，简单易上手。
       </>
     ),
   },
   {
-    title: '异步',
+    title: '功能丰富',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        随便填填
+        目前暂未将作为sdk的developTools和作为onebot应用的Eridanus相分离。后续将发布到pypi
       </>
     ),
   },

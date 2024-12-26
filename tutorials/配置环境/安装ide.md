@@ -17,7 +17,19 @@ sidebar_position: 1
 ## 安装git
 [git安装教程](https://blog.csdn.net/mukes/article/details/115693833)
 
-开始安装后无脑下一步就行。
+其实开始安装后无脑下一步就行。
+### 克隆仓库
+```yaml
+#找一个你喜欢的目录，打开cmd，下面指令任选其一
+git clone --depth 1 https://github.com/avilliai/Eridanus.git
+或使用镜像源
+git clone --depth 1 https://mirror.ghproxy.com/https://github.com/avilliai/Eridanus
+其他镜像源(推荐)
+git clone --depth 1 https://github.moeyy.xyz/https://github.com/avilliai/Eridanus
+```
+你将得到Eridanus文件夹。
+
+使用你的ide，打开Eridanus文件夹。
 ## 安装python3.11
 [安装python3.11](https://blog.csdn.net/MichaelJiangJunC/article/details/129996726)
 ## 在ide中配置python解释器
