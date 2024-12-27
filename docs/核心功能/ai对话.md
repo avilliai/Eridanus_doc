@@ -7,7 +7,7 @@ sidebar_position: 1
 群聊内：`@bot 你好` 
 
 私聊：`你好`
-## 配置方式
+## 配置文件
 文件来源 config/api.yaml
 ```yaml
 llm:
@@ -60,3 +60,9 @@ llm:
 
 ### open-standard-support model 配置方式
 文心、讯飞星火、chatglm、豆包、kimi都可以使用此配置方式
+## 代理
+```yaml
+llm:
+  enable_proxy: False
+```
+部分模型的使用，需要配置代理。当你配置了proxy中的http_proxy后，启用此项，bot将自动使用你配置的代理。
