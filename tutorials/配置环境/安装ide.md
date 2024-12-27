@@ -28,8 +28,8 @@ sidebar_position: 1
 
 **如果你用的搭建工具已经获取了【Eridanus项目】**，environments里面有一个python3.11/python.exe了，解释器直接选它，既不用再【装python3.11】也不用【安装依赖】
 ## 如何开始(二选一)
-### 从【Eridanus】继续开发
-#### 克隆仓库
+### 从【Eridanus项目】继续开发
+#### 1.如果你没有【Eridanus项目】源码
 ```yaml
 #找一个你喜欢的目录，打开cmd，下面指令任选其一
 git clone --depth 1 https://github.com/avilliai/Eridanus.git
@@ -38,18 +38,20 @@ git clone --depth 1 https://mirror.ghproxy.com/https://github.com/avilliai/Erida
 其他镜像源(推荐)
 git clone --depth 1 https://github.moeyy.xyz/https://github.com/avilliai/Eridanus
 ```
+
 你将得到Eridanus文件夹。
 
 使用你的ide，打开Eridanus文件夹。
-
-#### 安装依赖
+#### 1.如果你已经有了【Eridanus项目】源码
+直接用你的ide打开Eridanus文件夹即可。
+#### 2.安装依赖
 pycharm或者vsc都有一个terminal或者叫终端，点开它。输入下面的指令
 ```yaml
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip install -r requirements.txt
 ```
 ### 另起炉灶
-**暂未发布**，发布后你可以使用
+**暂未发布**，发布后你可以在任意终端使用以安装开发工具
 `pip install Eridanus`
 
 好了，你配置完环境了，准备开发去吧。
