@@ -14,7 +14,10 @@ llm:
   model: gemini #选择使用的模型(这里是大类别，具体模型在底下填)，用什么配什么
   system: "你现在是一只猫娘，你的名字是vilm，我的名字是{用户}，是你的主人。"
   func_calling: True #是否开启函数调用功能
-  prefix: "."
+  prefix:
+      - "."
+      - "。"
+      - "波子"
   enable_proxy: False
   max_history_length: 100 #最大聊天记录条数
   Quote: False #回复时是否引用
@@ -48,11 +51,14 @@ bot支持通过【函数调用】，实现更灵活的指令触发。
 ## 触发机制
 ```yaml
 llm:
-  prefix: "."
+  prefix:
+    - "."
+    - "。"
+    - "yucca"
   focus_time: 60  #单次触发对话后持续有效时间
 ```
 这两项允许你，
-- 以 . 作为前缀触发ai对话而无需艾特
+- 以` . 或 。 或 yucca `作为前缀触发ai对话而无需艾特，你可以继续像这样增加匹配的前缀。
 - 在一次触发对话后，60s内无需艾特，持续对话持续刷新时间。
 ## 申请apikey
 ### gemini配置方式
