@@ -4,9 +4,14 @@ sidebar_position: 1
 # 部署
 后续会发布专门的部署工具
 
-# 配置
-## Eridanus配置
-config/basic_config.yaml
+## onebot实现与适配器配置
+**ws适配器和http适配器二选一。如果你是普通用户，请配置【ws适配器】。**
+
+使用ws适配器时，需要开启onebot实现的正向websocket服务。
+
+使用http适配器时，需要同时开启onebot实现的http服务端功能和http客户端功能。
+### 先看看Eridanus的配置文件
+Eridanus/config/basic_config.yaml
 ```yaml
 #配置文件预览，你打开之后应该长这样。
 bot:
@@ -25,12 +30,6 @@ adapter:
     ws_link: "ws://127.0.0.1:3001"  #bot的websocket请求地址
 ```
 一般来说，改改bot的名字和master信息得了。剩下都是onebot默认配置。
-## 适配器配置
-**ws适配器和http适配器二选一。如果你是普通用户，请配置【ws适配器】。**
-
-使用ws适配器时，需要开启onebot实现的正向websocket服务。
-
-使用http适配器时，需要同时开启onebot实现的http服务端功能和http客户端功能。
 ### 使用ws适配器
 ```yaml
 adapter:
@@ -70,7 +69,7 @@ http://localhost:8080
 用http适配器时，第三个可以不用配置。
 #### 以llob为例
 ![img.png](核心功能/img/llob.png)
-
+## 用部署工具启动
 
 
 
