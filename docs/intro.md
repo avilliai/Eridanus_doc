@@ -25,31 +25,26 @@ adapter:
 ```
 一般来说，改改bot的名字和master信息得了。剩下都是onebot默认配置。
 ## onebot实现部分
-**ws适配器和http适配器二选一。**
+**ws适配器和http适配器二选一。如果你是普通用户，请配置ws适配器。**
 
 使用ws适配器时，需要开启onebot实现的正向websocket服务。
 
 使用http适配器时，需要同时开启onebot实现的http服务端功能和http客户端功能。
-### 以napcat为例
+### 使用ws适配器
+```yaml
+adapter:
+  access_token: "any_access_token" #onebot实现部分为空则不用改
+  ws_client:
+    ws_link: "ws://127.0.0.1:3001"
+```
+#### 以napcat为例
 ![img.png](核心功能/img/img.png)
 `点添加配置时，不要忘了点击【启用】`
-#### 使用ws适配器
-如上图最右侧，开启了ws服务器，端口为3001
-#### 使用http适配器
-如上图，onebot实现的http服务器在3000端口
 
-而上报地址为
-```yaml
-http://localhost:8080
-```
-### 以llob为例
-#### 使用ws适配器
+如上图最右侧，开启了ws服务器，端口为3001
+#### 以llob为例
 ![img.png](核心功能/img/llob2.png)
-#### 使用http适配器
-![img.png](核心功能/img/llob.png)
-## 适配器
-如果你都是默认的配置，就不用动。改了的话，这里跟着改就完事。
-### http适配器
+### 使用http适配器
 ```yaml
 adapter:
   access_token: "any_access_token" #onebot实现部分为空则不用改
@@ -59,10 +54,21 @@ adapter:
   http_client:
     url: "http://127.0.0.1:3000" 
 ```
-### ws适配器
+如上图的napcat，onebot实现的http服务器在3000端口
+
+而上报地址为
 ```yaml
-adapter:
-  access_token: "any_access_token" #onebot实现部分为空则不用改
-  ws_client:
-    ws_link: "ws://127.0.0.1:3001"
+http://localhost:8080
 ```
+#### 以napcat为例
+![img.png](核心功能/img/img.png)
+`点添加配置时，不要忘了点击【启用】`
+
+用http适配器时，第三个可以不用配置。
+#### 以llob为例
+![img.png](核心功能/img/llob.png)
+
+
+
+
+
