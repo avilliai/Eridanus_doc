@@ -8,6 +8,7 @@ sidebar_position: 1
 ## Eridanus配置
 config/basic_config.yaml
 ```yaml
+#配置文件预览，你打开之后应该长这样。
 bot:
   name: "Eridanus"
 master:
@@ -24,7 +25,7 @@ adapter:
     ws_link: "ws://127.0.0.1:3001"  #bot的websocket请求地址
 ```
 一般来说，改改bot的名字和master信息得了。剩下都是onebot默认配置。
-## onebot实现部分
+## 适配器配置
 **ws适配器和http适配器二选一。如果你是普通用户，请配置ws适配器。**
 
 使用ws适配器时，需要开启onebot实现的正向websocket服务。
