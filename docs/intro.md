@@ -26,7 +26,7 @@ adapter:
 ```
 一般来说，改改bot的名字和master信息得了。剩下都是onebot默认配置。
 ## 适配器配置
-**ws适配器和http适配器二选一。如果你是普通用户，请配置ws适配器。**
+**ws适配器和http适配器二选一。如果你是普通用户，请配置【ws适配器】。**
 
 使用ws适配器时，需要开启onebot实现的正向websocket服务。
 
@@ -34,6 +34,7 @@ adapter:
 ### 使用ws适配器
 ```yaml
 adapter:
+  #其他配置项暂且省略，这不意味着你可以随便删除别的配置项。
   access_token: "any_access_token" #onebot实现部分为空则不用改
   ws_client:
     ws_link: "ws://127.0.0.1:3001"
@@ -48,6 +49,7 @@ adapter:
 ### 使用http适配器
 ```yaml
 adapter:
+  #其他配置项暂且省略，这不意味着你可以随便删除别的配置项。
   access_token: "any_access_token" #onebot实现部分为空则不用改
   http_sever:       #bot的运行端口，onebot的事件上报到这里
     host: "0.0.0.0"
