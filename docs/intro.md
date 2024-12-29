@@ -4,7 +4,7 @@ sidebar_position: 1
 # 部署
 后续会发布专门的部署工具
 
-## onebot实现与适配器配置
+## onebot实现与适配器配置(先看后面的搭建部分)
 **ws适配器和http适配器二选一。如果你是普通用户，请配置【ws适配器】。**
 
 使用ws适配器时，需要开启onebot实现的正向websocket服务。
@@ -69,7 +69,30 @@ http://localhost:8080
 用http适配器时，第三个可以不用配置。
 #### 以llob为例
 ![img.png](核心功能/img/llob.png)
-## 用部署工具启动
+## 用部署工具搭建
+`没做呢`
+## 不用部署工具搭建
+### 克隆仓库 
+确保你已经安装了【git】，找一个你喜欢的目录，在该文件夹打开cmd。
+
+从以下几条指令选一条输入
+```yaml
+git clone --depth 1 https://github.com/avilliai/Eridanus.git
+或使用镜像源
+git clone --depth 1 https://mirror.ghproxy.com/https://github.com/avilliai/Eridanus.git
+其他镜像源(推荐)
+git clone --depth 1 https://github.moeyy.xyz/https://github.com/avilliai/Eridanus.git
+```
+### python环境
+[下载python3.11](https://mirrors.huaweicloud.com/python/3.11.0/python-3.11.0-amd64.exe)
+
+双击开始安装，第一步【一定要勾选add to path】
+### 配置onebot实现与适配器
+见文档开头【onebot实现与适配器配置】
+### 安装依赖与启动
+双击Eridanus/一键部署脚本.bat
+
+等待安装完成，双击 启动脚本.bat
 
 
 
