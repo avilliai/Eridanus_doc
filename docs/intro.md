@@ -25,6 +25,8 @@ adapter:
 ```
 一般来说，改改bot的名字和master信息得了。剩下都是onebot默认配置。
 ## onebot实现部分
+**ws适配器和http适配器二选一。**
+
 使用ws适配器时，需要开启onebot实现的正向websocket服务。
 
 使用http适配器时，需要同时开启onebot实现的http服务端功能和http客户端功能。
