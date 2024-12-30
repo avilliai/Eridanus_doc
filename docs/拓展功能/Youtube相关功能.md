@@ -30,7 +30,7 @@ proxy:
 ```
 如果你开启了【函数调用】，你可以直接告诉bot你想听asmr。
 ### 配置频道
-配置所使用的频道
+配置所使用的频道`config/api.yaml`
 ```yaml
 youtube_asmr:
   send_type: file   #record或者file，record是语音，file是文件
