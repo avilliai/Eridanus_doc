@@ -3,7 +3,7 @@ sidebar_position: 4
 ---
 # Youtube相关功能
 ## 完成登录认证
-因为反爬的原因，需要使用你的账号，才能确保此类功能正常使用。
+因为反爬的原因，需要使用你的youtube账号(一般也是google账号)，才能确保此类功能正常使用。
 
 `config/api.yaml`
 ### 配置代理
@@ -12,7 +12,9 @@ proxy:
   http_proxy: ""   #填写你的代理地址
   socks_proxy: ""
 ```
-### 使用【工具脚本.bat】即tool.py完成登录
+### 登录
+使用【工具脚本.bat】即tool.py完成登录
+
 运行之后，按提示操作。
 ![img](./img/544e3c8554992aa0c45c43ca27c09ce5.png)
 登录后的一段时间内，你可以顺利地使用asmr以及youtube相关功能。
