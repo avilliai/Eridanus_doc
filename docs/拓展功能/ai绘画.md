@@ -44,7 +44,7 @@ ckpt
 ```yaml
 ckpt2 {modelname}
 ```
-## kaggle部署ai绘画
+## kaggle部署ai绘画(必看)
 下面的教程将带你实现白嫖kaggle的gpu资源。
 
 【inspired by [spawner](https://www.kaggle.com/spawnerqwq)】
