@@ -95,7 +95,7 @@ https://www.kaggle.com/code/xxxx/qqbot-simple-reforge-spawner
 
 Achernar是Eridanus的派生项目。从[release](https://github.com/avilliai/Achernar/releases)下载最新的发行版。
 ### 安装chrome浏览器
-自己装吧，不教了
+自己装吧，不教了。
 ### 编辑Achernar配置文件
 `Achernar/config.yaml`
 ```yaml
@@ -118,6 +118,8 @@ cpolar:
   password: "密码"
 ```
 **运行Achernar.exe**
+
+(有条件的话，启动时开一下代理，启动完运行的时候关掉。或者直接开pac模式)
 ### 配置Eridanus
 `config/api.yaml`
 ```yaml
