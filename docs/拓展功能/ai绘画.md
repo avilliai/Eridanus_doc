@@ -59,7 +59,7 @@ ckpt2 {modelname}
 
 记录你的cpolar密钥 即隧道AuthToken，比如`YTMgojjgnagtnbvjppf`(这是我乱打的，你并不能偷懒直接拿去用)
 ### kaggle脚本修改
-打开[脚本1](https://www.kaggle.com/code/spawnerqwq/qqbot-sd-nyan-spawner)或者[脚本2](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，点击白色的copy&edit，跳转到新页面后往下划拉。
+打开[spawner的脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，点击白色的copy&edit，跳转到新页面后往下划拉。
 
 (这里其他人的脚本理论上也可以用)
 ![img.png](./img/kaggle.png)
