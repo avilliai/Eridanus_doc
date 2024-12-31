@@ -80,7 +80,7 @@ if cpolar_use:
 https://www.kaggle.com/code/xxxx/qqbot-simple-reforge-spawner
 ```
 这个链接我们待会会用到。
-### 持久化运行
+### 为持久化运行做准备
 多注册一些账号，记录好账号密码，同时每一个账号都需要完成手机号验证，否则无法使用。
 
 等下我们会用到。
@@ -111,7 +111,7 @@ cpolar:
   email: "你的cpolar账号"
   password: "密码"
 ```
-运行Achernar.exe
+**运行Achernar.exe**
 ### 配置Eridanus
 `config/api.yaml`
 ```yaml
