@@ -44,3 +44,83 @@ ckpt
 ```yaml
 ckpt2 {modelname}
 ```
+## kaggle部署ai绘画(kaggle部分)
+### 注册登录
+[kaggle](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)
+记得绑定手机号，不然用不了gpu和联网。
+
+`在哪绑？唉我不告诉你😋自己找，我忘了。`
+### cpolar注册
+去[cpolar](https://dashboard.cpolar.com/get-started)注册(选免费套餐)，然后点验证，复制你的隧道 Authtoken
+
+记录你的cpolar密钥 即隧道AuthToken，比如`YTMgojjgnagtnbvjppf`(这是我乱打的，你并不能偷懒直接拿去用)
+### kaggle脚本修改
+打开[spawner的脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，点击白色的copy&edit，跳转到新页面后往下划拉。
+
+![img.png](./img/kaggle.png)
+把图中的`cpolar密钥`换成你上面申请的隧道AuthToken，看起来应该是这样
+```python
+cpolar_use = True
+if cpolar_use:
+    !curl -L https://www.cpolar.com/static/downloads/install-release-cpolar.sh | sudo bash
+    !cpolar version
+    !cpolar authtoken YTMgojjgnagtnbvjppf
+    def iframe_thread_1():
+        !cpolar http 7860    #网页
+    t1=threading.Thread(target=iframe_thread_1)
+    t1.start()
+    !wget -q -O - ipv4.icanhazip.com
+    author = 'spawner'
+```
+### 设为公开脚本
+点击页面右上角的share，将脚本设置为公开，这是为了其他账号能够正常访问。
+![img.png](./img/kaggle1.png)
+记录下这里的public url，然后点击save。
+```yaml
+https://www.kaggle.com/code/xxxx/qqbot-simple-reforge-spawner
+```
+这个链接我们待会会用到。
+### 持久化运行
+多注册一些账号，记录好账号密码，同时每一个账号都需要完成手机号验证，否则无法使用。
+
+等下我们会用到。
+
+验证码部分你可以找接码平台。
+## 部署Achernar
+[Achernar](https://github.com/avilliai/Achernar)
+
+Achernar是Eridanus的派生项目。从[release](https://github.com/avilliai/Achernar/releases)下载最新的发行版。
+### 安装chrome浏览器
+自己装吧，不教了
+### 编辑Achernar配置文件
+`Achernar/config.yaml`
+```yaml
+proxy: ""     #没用，不用管这一项
+port: 3529   #项目运行的端口，可以记录一下
+enable_kaggle_extension: true
+enable_cpolar_extension: true
+cpolar_check_interval: 3600         #cpolar检查时间
+kaggle_change_account_interval: 36000   #kaggle账号切换间隔
+
+kaggle_accounts:
+  - email: "你的kaggle账号"
+    password: "密码"
+  - email: "你的第二个kaggle账号"
+    password: "密码"  #以此类推
+cpolar:
+  email: "你的cpolar账号"
+  password: "密码"
+```
+运行Achernar.exe
+### 配置Eridanus
+`config/api.yaml`
+```yaml
+ai绘画:
+  sdUrl: "http://127.0.0.1:3529" 
+  sd审核和反推api: "http://127.0.0.1:3529"
+  nai_key: ""
+```
+重启Eridanus以重载配置文件。 至此，你应该已经可以在群里使用
+```yaml
+画 xxx #
+```
