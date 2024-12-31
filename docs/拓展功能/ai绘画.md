@@ -45,11 +45,15 @@ ckpt
 ckpt2 {modelname}
 ```
 ## kaggle部署ai绘画
-### 注册登录
-[kaggle](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)
-记得绑定手机号，不然用不了gpu和联网。
+下面的教程将带你实现白嫖kaggle的gpu资源。
 
-`在哪绑？唉我不告诉你😋自己找，我忘了。`
+【inspired by [spawner](https://www.kaggle.com/spawnerqwq)】
+### kaggle注册登录
+[kaggle](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)
+
+记得**绑定手机号**，不然用不了gpu和联网。
+
+`在哪绑？我忘了，自己找去。`
 ### cpolar注册
 去[cpolar](https://dashboard.cpolar.com/get-started)注册(选免费套餐)，然后点验证，复制你的隧道 Authtoken
 
