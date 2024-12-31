@@ -79,11 +79,11 @@ if cpolar_use:
 ### 设为公开脚本
 点击页面右上角的share，将脚本设置为公开，这是为了其他账号能够正常访问。
 ![img.png](./img/kaggle1.png)
-记录下这里的public url，然后点击save。
+**记录下这里的public url**，然后点击save。
 ```yaml
 https://www.kaggle.com/code/xxxx/qqbot-simple-reforge-spawner
 ```
-这个链接我们待会会用到。
+这个【分享链接】我们待会会用到。
 ### 为持久化运行做准备
 多注册一些账号，记录好账号密码，同时每一个账号都需要完成手机号验证，否则无法使用。
 
@@ -100,11 +100,13 @@ Achernar是Eridanus的派生项目。从[release](https://github.com/avilliai/Ac
 `Achernar/config.yaml`
 ```yaml
 proxy: ""     #没用，不用管这一项
-port: 3529   #项目运行的端口，可以记录一下
+port: 3529
+#在shared_notebook填入上面记录的你的【分享链接】
+shared_notebook: "https://www.kaggle.com/code/xxxx/qqbot-simple-reforge-spawner"           
 enable_kaggle_extension: true
 enable_cpolar_extension: true
-cpolar_check_interval: 3600         #cpolar检查时间
-kaggle_change_account_interval: 36000   #kaggle账号切换间隔
+cpolar_check_interval: 3600        
+kaggle_change_account_interval: 36000   
 
 kaggle_accounts:
   - email: "你的kaggle账号"
