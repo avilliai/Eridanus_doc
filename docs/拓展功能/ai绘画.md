@@ -44,7 +44,7 @@ ckpt
 ```yaml
 ckpt2 {modelname}
 ```
-## kaggle部署ai绘画(kaggle部分)
+## kaggle部署ai绘画
 ### 注册登录
 [kaggle](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)
 记得绑定手机号，不然用不了gpu和联网。
