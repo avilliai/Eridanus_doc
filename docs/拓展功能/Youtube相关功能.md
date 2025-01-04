@@ -36,8 +36,13 @@ youtube_asmr:
   send_type: file   #record或者file，record是语音，file是文件
   channels:      #频道来源。此功能需要配置proxy，并通过tools完成登录。
     - '@emococh'
-    - '@-gabisroom-4153'
+    - '@-gabisroom-4153'  #以此类推，你可以增加更多频道
 ```
 ## 下载youtube视频
-
+```yaml
+/yt音频{视频链接}  #获取指定视频的音频文件，比如 /yt音频https://youtu.be/L229QDxDakU?si=D3_oxY-ghnUeGO7s
+```
 ## 下载youtube音频
+```yaml
+/yt视频{视频链接}  #获取指定视频的音频文件，比如 /yt视频https://youtu.be/L229QDxDakU?si=D3_oxY-ghnUeGO7s
+```
