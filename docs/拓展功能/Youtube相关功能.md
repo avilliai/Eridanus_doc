@@ -46,3 +46,13 @@ youtube_asmr:
 ```yaml
 /yt视频{视频链接}  #获取指定视频的音频文件，比如 /yt视频https://youtu.be/L229QDxDakU?si=D3_oxY-ghnUeGO7s
 ```
+### 进阶——函数调用
+youtube相关功能支持函数调用，当config/api.yaml配置了对话模型并启用了函数调用
+```yaml
+llm:
+  func_calling: True #是否开启函数调用功能
+```
+你可以使用灵活的触发方式。
+```
+@bot 下载{链接}的音频/视频
+```
