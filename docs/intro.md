@@ -2,7 +2,8 @@
 sidebar_position: 1
 ---
 # 部署
-后续会发布专门的部署工具
+写在前面：
+Eridanus和Manyana一样，使用了大量的yaml文件以为用户提供充分的自定义空间。但目前的Eridanus并未制作启动器兼yaml编辑器，为避免您因不知道yaml语法而无法使用此项目。
 
 ## 1.onebot实现与适配器配置
 **请配置【ws适配器】。**
@@ -19,7 +20,7 @@ sidebar_position: 1
 ## 2.部署Eridanus
 以下三选一。
 
-Eridanus不像Manyana为“小白”准备了默认免费对话模型，对话等功能需要参照后续文档进行配置。
+Eridanus不像Manyana为“小白”准备了默认免费对话模型，对话等功能需要参照后续文档自行配置。
 ### 用部署工具搭建
 `没做呢`
 ### 从Manyana到Eridanus
