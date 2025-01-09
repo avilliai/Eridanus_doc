@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 # Lesson 1: 基本yaml语法
-大部分用户并没有耐心去[runoob.com](https://www.runoob.com/w3cnote/yaml-intro.html) 学习yaml语法，而实际上，就使用Eridanus所需要的yaml语法掌握程度而言，通过耗费几分钟阅读本节，您将避免很多不必要的麻烦。
+大部分用户并没有耐心去[runoob.com](https://www.runoob.com/w3cnote/yaml-intro.html) 学习yaml语法，而事实上，就使用Eridanus所需要的yaml语法掌握程度而言，您只需要通过耗费几分钟阅读本节，就可以避免很多不必要的麻烦。
 
 ## 关于 "-"
 ```yaml
@@ -36,13 +36,13 @@ gemini:
 与增加车厢提高载客量一样，我们不使用`api_keys: key`是因为，考虑到部分bot面向的用户量比较大，因此使用列表(车厢)能够通过填写多个apikey以分散单个apikey的压力。(google会有每分钟请求限制)
 
 你可以看到，我们在使用openai sdk的时候也使用了同样的思路。
-# 关于 ":"
+## 关于 ":"
 在yaml文件中`：`无法被读取，而`:`可以，并且`:`后面需要加一个空格变成`: `，这样才是一个完整的yaml键值对`key: value`
-# 关于"True"和"true"
+## 关于"True"和"true"
 在yaml文件中，这两种写法都能被读取为boolean值，所以两种写法都可以，`false`和`False`也是同理。
-# 关于数字
+## 关于数字
 在python中，能转为int类型的数据，在yaml文件被读取时都会被转为int。
-# 关于`key: value`以及嵌套结构(拓展)
+## 关于`key: value`以及嵌套结构(拓展)
 **请注意，既定的项目的yaml文件结构中每一对key: value均有其特定用处，如果您不是开发者，不要随意变动yaml文件结构，否则可能导致项目运行异常或功能缺失。**
 
 你可能需要回顾一下数据类型的知识了。
