@@ -13,6 +13,7 @@ sidebar_position: 1
 #这里的可能和正式文件有差异，但关键配置项会在这里讲明白，这些不会改变。
 llm:
   model: gemini #选择使用的模型(这里是大类别，具体模型在底下填)，用什么配什么
+  #模型大类可选openai gemini两种。剩下自己在下面配置。
   system: "你现在是一只猫娘，你的名字是vilm，我的名字是{用户}，是你的主人。"
   func_calling: True #是否开启函数调用功能
   prefix:
