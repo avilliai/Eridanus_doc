@@ -18,7 +18,7 @@ llm:
   prefix:
       - "."
       - "。"
-      - "波子"
+      - "叮咚鸡"
   enable_proxy: False
   max_history_length: 100 #最大聊天记录条数
   Quote: False #回复时是否引用
@@ -69,10 +69,61 @@ master也可使用【清理所有人的对话记录】之类的话来清理所�
 ```
 ## 申请apikey
 ### gemini配置方式
+#### 1、获取gemini apikey
+[先获取Gemini apikey](https://ai.google.dev/tutorials/setup?hl=zh-cn) (获取过程需要开启代理，打不开/地区不可用就是你机场不行。)
 
+打开config/api.yaml
+```yaml
+#这里省略了其他配置项，不代表你可以随便删除其他配置项。
+llm:
+  model: gemini #选择使用的模型大类。
+  system: "你现在是一只猫娘，你的名字是{bot_name}，我的名字是{用户}，是你的主人。"
+  enable_proxy: False
+  gemini:         #https://ai.google.dev/
+    api_keys:
+      - YOUR_API_KEY_1   #这里填入你的apikey，有几个填几个，只有一个的话，需要把下面的gemini-2.0-flash-exp删除。
+      - YOUR_API_KEY_2
+    model: gemini-2.0-flash-exp
+    base_url: https://generativelanguage.googleapis.com #后面的/v1/beta什么的会自动填充
+```
+#### 2、配置正向代理/反向代理(二选一)
+只配置apikey，但不配置proxy是不行的。
+##### 反向代理
+反向代理配置难度较低，建议使用。
+```yaml
+一些你可以使用的反代地址，不保证全都能用。
+https://dainty-liger-d8726e.netlify.app
+https://calm-taiyaki-bb86b0.netlify.app
+https://inspiring-piroshki-716f76.netlify.app
+https://fbsvilli.netlify.app
+https://mellifluous-cupcake-ea08ad.netlify.app
+https://fsadfafsfdsafsa.netlify.app
+https://voluble-frangipane-db8db1.netlify.app
 
-### open-standard-support model 配置方式
+如果你想要搭建自己的反向代理，自行查看https://simonmy.com/posts/%E4%BD%BF%E7%94%A8netlify%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86google-palm-api.html。
+```
+```yaml
+#省略了其他配置项，不代表你可以随便删除其他配置项。
+llm:
+  model: gemini 
+  system: "你现在是一只猫娘，你的名字是{bot_name}，我的名字是{用户}，是你的主人。"
+  enable_proxy: False
+  gemini:    
+    base_url: https://mellifluous-cupcake-ea08ad.netlify.app  #填写了一个反代地址
+```
+##### 正向代理
+取决于你自己的代理软件，我不能给你一个准确答案。如果你看不懂就老老实实用反代。
+```yaml
+#省略了其他配置项，不代表你可以随便删除其他配置项。
+llm:
+  enable_proxy: True 
+proxy:
+  http_proxy: "http://127.0.0.1:10809"  #本地代理软件的的http代理端口。
+```
+### open标准模型配置方式
 文心、讯飞星火、chatglm、豆包、kimi都可以使用此配置方式
+
+不再赘述。爱折腾这块的多少都知道怎么做。
 ## 代理
 ```yaml
 llm:
