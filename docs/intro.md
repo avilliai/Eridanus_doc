@@ -48,7 +48,7 @@ git clone --depth 1 https://github.moeyy.xyz/https://github.com/avilliai/Eridanu
 如果你需要修改bot名称，这部分在`Eridanus/config/basic_config.yaml`
 
 bot和master之外的配置项不建议动，除非你知道自己在做什么。
-### 安装依赖与启动
+#### 安装依赖与启动
 双击Eridanus/一键部署脚本.bat
 
 等待安装完成，双击 启动脚本.bat
