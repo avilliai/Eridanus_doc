@@ -124,7 +124,7 @@ proxy:
 文心、讯飞星火、chatglm、豆包、kimi都可以使用此配置方式
 
 不再赘述。爱折腾这块的多少都知道怎么做。
-## 代理
+#### 代理
 ```yaml
 llm:
   enable_proxy: False
