@@ -2,6 +2,7 @@
 sidebar_position: 7
 ---
 # JMComic 功能
+**此功能需要配置proxy**。
 ## 验车
 ```yaml
 验车1046487
@@ -18,4 +19,3 @@ JM下载1046487
 ```yaml
 jm搜{关键字}
 ```
-to be continued...

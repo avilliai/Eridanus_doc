@@ -1,8 +1,8 @@
 ---
 sidebar_position: 8
 ---
-# b站动态监测
-## 指令
+# bilibili相关功能
+## 添加/移除订阅
 ```yaml
 /bili add {uid}  #不用带{}  
 /bili remove {uid}  #不用带{}  
@@ -10,10 +10,10 @@ sidebar_position: 8
 分别对应添加和删除任务。
 
 直播检测以后做
-## 配置方式
-更新脚本-3 playwright工具安装
-![image.png](./img/playwright.png)
-
+## 热门
+```yaml
+今日热门    #后续加入定时任务中。
+```
 ### 进阶——函数调用
 b站订阅查询支持函数调用，当config/api.yaml配置了对话模型并启用了函数调用
 ```yaml
