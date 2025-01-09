@@ -9,10 +9,7 @@ Eridanus和Manyana一样，使用了大量的yaml文件以为用户提供充分�
 - [lesson1 基本yaml语法](https://eridanus-doc.netlify.app/docs/lessons/lesson1) 
 
 ## 1.onebot实现与适配器配置
-**请配置【ws适配器】。**
-
-使用ws适配器时，需要开启onebot实现的正向websocket服务。
-
+需要开启onebot实现的正向websocket服务。
 ### 安装llob或napcat
 - [napcat](https://napneko.github.io/) 优势：低占用，一键包启动方便。
   - 需要手动开启websocketsever服务(见napcat文档)，端口为默认3001,accessToken留空不要填。
