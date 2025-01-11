@@ -118,9 +118,9 @@ cpolar:
   email: "cpolar的邮箱"
   password: "cpolar的密码"
 ```
-**运行Achernar.exe**
+**运行Achernar主程序**
 
-(有条件的话，启动时开一下代理，启动完运行的时候关掉。或者直接开pac模式)
+(有条件的话，建议开启代理，并设置为pac模式/规则代理模式，将有助于稳定运行。)
 ### 配置Eridanus
 `config/api.yaml`
 ```yaml
