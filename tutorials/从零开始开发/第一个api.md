@@ -9,7 +9,9 @@ api（Application Programming Interface）指应用程序编程接口，你可�
 
 接下来我们将以 随机柴郡表情包 为例，展示如何调用外部api
 ## 定义一个函数
-### 在api站点找到你想用的接口
+### 选择接口
+在api站点找到你想用的接口
+
 [随机柴郡表情包api](https://api.yujn.cn/?action=interface&id=196)
 
 观察得知，这个api的地址为`http://api.yujn.cn/api/chaijun.php` ，同时，它是直接返回图片的，不用传递其他参数。
@@ -28,7 +30,7 @@ async def chaijun():                              #async def是固定前缀，�
             f.write(r.content)
         return path                             #返回图片路径
 if __name__ == '__main__':
-    import asyncio                  #模拟外部调用
+    import asyncio                  #调用测试
     asyncio.run(chaijun())
 ```
 好的，我们顺利地写出了第一个功能函数，运行这个函数吧，你应该会得到一张柴郡表情包的图片。
@@ -80,8 +82,8 @@ if __name__ == '__main__':
 
 httpx是一个【异步】库，异步编程允许程序在等待I/O操作完成时执行其他任务，从而避免了程序在I/O操作期间的空闲等待，因此不会出现阻塞情况。
 ### 伪异步
-尽管函数前加上 async 可以使其成为协程函数，但这并不意味着函数内部的操作会自动变为异步。async 只是标记了函数是异步的，函数内部如果调用的是同步操作（例如 requests.get()），那么这些操作依然会阻塞当前线程。因此，async 本身并不会改变函数执行的同步本质，只有使用支持异步的库（如 httpx）才能实现非阻塞的异步操作。
 ```python
+#伪异步示例
 import requests
 async def chaijun():                            
     url = "http://api.yujn.cn/api/chaijun.php?"   #柴郡图片的api地址
@@ -91,3 +93,4 @@ async def chaijun():
         f.write(r.content)
     return path   
 ```
+尽管函数前加上 async 可以使其成为协程函数，但这并不意味着函数内部的操作会自动变为异步。async 只是标记了函数是异步的，函数内部如果调用的是同步操作（例如 requests.get()），那么这些操作依然会阻塞当前线程。因此，async 本身并不会改变函数执行的同步本质，只有使用支持异步的库（如 httpx）才能实现非阻塞的异步操作。
