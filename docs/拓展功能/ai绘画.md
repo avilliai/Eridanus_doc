@@ -94,29 +94,29 @@ https://www.kaggle.com/code/xxxx/qqbot-simple-reforge-spawner
 ## 部署Achernar
 [Achernar](https://github.com/avilliai/Achernar)
 
-Achernar是Eridanus的派生项目。从[release](https://github.com/avilliai/Achernar/releases)下载最新的发行版。
-### 安装chrome浏览器
-自己装吧，不教了。
+Achernar是Eridanus的派生项目。参照readme.md部署。
+
 ### 编辑Achernar配置文件
 `Achernar/config.yaml`
 ```yaml
 proxy: ""     #没用，不用管这一项
 port: 3529
-#在shared_notebook填入上面记录的你的【分享链接】
-shared_notebook: "https://www.kaggle.com/code/xxxx/qqbot-simple-reforge-spawner"           
+headless: false #是否开启浏览器无头模式，低配服务器建议开启。
+#在shared_notebook填入记录的你的【分享链接】
+shared_notebook: ""
 enable_kaggle_extension: true
 enable_cpolar_extension: true
-cpolar_check_interval: 3600        
-kaggle_change_account_interval: 36000   
+cpolar_check_interval: 360
+kaggle_change_account_interval: 36000
 
 kaggle_accounts:
-  - email: "你的kaggle账号"
-    password: "密码"
-  - email: "你的第二个kaggle账号"
-    password: "密码"  #以此类推
+  - email: "你的邮箱"
+    password: "你的密码"
+  - email: "你的第二个邮箱"
+    password: "你的第二个密码"  #以此类推
 cpolar:
-  email: "你的cpolar账号"
-  password: "密码"
+  email: "cpolar的邮箱"
+  password: "cpolar的密码"
 ```
 **运行Achernar.exe**
 
