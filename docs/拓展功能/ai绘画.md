@@ -101,7 +101,7 @@ Achernar是Eridanus的派生项目。参照readme.md部署。
 ```yaml
 proxy: ""     #没用，不用管这一项
 port: 3529
-headless: false #是否开启浏览器无头模式，低配服务器建议开启。
+headless: true #是否开启浏览器无头模式，低配服务器建议开启。
 #在shared_notebook填入记录的你的【分享链接】
 shared_notebook: ""
 enable_kaggle_extension: true
@@ -117,6 +117,7 @@ kaggle_accounts:
 cpolar:
   email: "cpolar的邮箱"
   password: "cpolar的密码"
+
 ```
 **运行Achernar主程序**
 
