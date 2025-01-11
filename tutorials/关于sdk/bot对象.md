@@ -17,7 +17,6 @@ await bot.send_like(184009492)
         发送请求并异步等待响应。
         """
 ```
-可添加自定义action
 ### 发送自定义action
 [napcat](https://napcat.apifox.cn/5430207m0)有一些专有接口，出于通用性(懒)考虑，eridanus暂时没有进行对接，但你可以自己发送action以实现相应功能。
 
