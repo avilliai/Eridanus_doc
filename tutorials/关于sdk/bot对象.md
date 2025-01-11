@@ -17,7 +17,7 @@ await bot.send_like(184009492)
         发送请求并异步等待响应。
         """
 ```
-可添加自定义action。params为消息体。
+可添加自定义action。params为数据。
 ## 发送消息
 ```
     async def send(self, event: EventBase, components: list[Union[MessageComponent, str]],Quote: bool=False):
@@ -28,7 +28,7 @@ await bot.send_like(184009492)
             components (list[Union[MessageComponent, str]]): 消息组件或字符串。
         """
 ```
-event仅限GroupMessageEvent和PrivateMessageEvent
+目前event仅限GroupMessageEvent和PrivateMessageEvent，后面会提供更多兼容。
 
 components见下一章节。
 ```
