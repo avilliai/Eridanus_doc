@@ -7,7 +7,7 @@ sidebar_position: 1
 - 【Eridanus项目】即主仓库，已经完成了诸多功能。
 - 【Eridanus sdk】是为其他开发者提供的开发工具，使你能够另起炉灶编写bot源码
 
-接下来的教程假设`你既不懂git怎么用，也不知道怎么配置python环境，`
+接下来的教程为`纯小白`编写，但也只是提供参考，编者并非python辅导教师，亦无义务解答项目之外的问题。
 ## 安装ide
 二选一
 
@@ -19,39 +19,11 @@ sidebar_position: 1
 
 其实开始安装后无脑下一步就行。
 ## 安装python3.11
+(如果你打算在【Eridanus项目】基础上开发，请直接将ide的解释器设置为【Eridanus项目】所附带的python解释器，随后跳过剩下的部分。)
+
 [安装python3.11](https://blog.csdn.net/MichaelJiangJunC/article/details/129996726)
 ## 在ide中配置python解释器
 ### 配置解释器
 [懒得教](https://blog.csdn.net/qq_42432673/article/details/108440370)
 
 选刚才安装的python3.11。
-
-**如果你用的搭建工具已经获取了【Eridanus项目】**，environments里面有一个python3.11/python.exe了，解释器直接选它，既不用再【装python3.11】也不用【安装依赖】
-## 如何开始(二选一)
-### 从【Eridanus项目】继续开发
-#### 1.如果你没有【Eridanus项目】源码
-```yaml
-#找一个你喜欢的目录，打开cmd，下面指令任选其一
-git clone --depth 1 https://github.com/avilliai/Eridanus.git
-或使用镜像源
-git clone --depth 1 https://mirror.ghproxy.com/https://github.com/avilliai/Eridanus
-其他镜像源(推荐)
-git clone --depth 1 https://github.moeyy.xyz/https://github.com/avilliai/Eridanus
-```
-
-你将得到Eridanus文件夹。
-
-使用你的ide，打开Eridanus文件夹。
-#### 1.如果你已经有了【Eridanus项目】源码
-直接用你的ide打开Eridanus文件夹即可。
-#### 2.安装依赖
-pycharm或者vsc都有一个terminal或者叫终端，点开它。输入下面的指令
-```yaml
-pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
-pip install -r requirements.txt
-```
-### 另起炉灶
-**暂未发布**，发布后你可以在任意终端使用以安装开发工具
-`pip install Eridanus`
-
-好了，你配置完环境了，准备开发去吧。

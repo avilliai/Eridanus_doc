@@ -1,8 +1,8 @@
 {
   "label": "关于sdk",
-  "position": 4,
+  "position": 5,
   "link": {
     "type": "generated-index",
-    "description": "开始你的堆矢山之旅吧！"
+    "description": "这些是通用的"
   }
 }

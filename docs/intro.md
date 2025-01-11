@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 # 部署
+这部分为使用Eridanus的普通用户编写，如果您是开发者，请移步【教程】。
+
 写在前面：
 Eridanus和Manyana一样，使用了大量的yaml文件以为用户提供充分的自定义空间。
 
