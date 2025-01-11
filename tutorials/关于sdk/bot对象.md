@@ -18,6 +18,14 @@ await bot.send_like(184009492)
         """
 ```
 可添加自定义action。params为数据。
+### 发送自定义action
+[napcat](https://napcat.apifox.cn/5430207m0)有一些专有接口，出于通用性(懒)考虑，eridanus暂时没有进行对接，但你可以自己发送action以实现相应功能。
+
+以设置个性签名为例，接口为`/set_self_longnick`，参数为`{"longNick": "唔，瓦拉瓦拉"}`，那么就可以这样调用。
+```python
+await bot._call_api("set_self_longnick",{"longNick": "唔，瓦拉瓦拉"})
+```
+
 ## 发送消息
 ```
     async def send(self, event: EventBase, components: list[Union[MessageComponent, str]],Quote: bool=False):
