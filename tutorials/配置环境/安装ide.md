@@ -19,7 +19,7 @@ sidebar_position: 1
 
 其实开始安装后无脑下一步就行。
 ## 安装python3.11
-(如果你打算在【Eridanus项目】基础上开发，请直接将ide的解释器设置为【Eridanus项目整合包】所附带的python解释器，随后跳过剩下的部分。)
+(如果你打算在【Eridanus项目】基础上开发，请直接将ide的解释器设置为【Eridanus项目整合包】所附带的python解释器，这样就不用在装依赖了。)
 
 [安装python3.11](https://blog.csdn.net/MichaelJiangJunC/article/details/129996726)
 ## 在ide中配置python解释器
