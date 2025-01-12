@@ -147,7 +147,7 @@ ai绘画:
 tag    #反推图片prompt
 ```
 
-**下面是高级用法**
+## 高级用法
 ### 关于抽卡(wildcard)功能
 ```yaml
 getwd
