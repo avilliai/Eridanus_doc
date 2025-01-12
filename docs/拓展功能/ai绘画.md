@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 ---
-# ai绘画
+# AI绘画
 ## 接入你自己的sd
 配置文件`config/api.yaml`
 ```yaml
