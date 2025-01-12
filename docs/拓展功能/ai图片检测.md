@@ -1,6 +1,7 @@
 ---
 sidebar_position: 10
 ---
+
 # AI图片检测
 检查图片是否为ai生成
 ## 指令
