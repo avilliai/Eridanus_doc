@@ -53,7 +53,7 @@ ckpt2 {modelname}
 
 记得**绑定手机号**，不然用不了gpu和联网。
 
-`在哪绑？我忘了，自己找去。`
+`在profile界面。`
 ### cpolar注册
 去[cpolar](https://dashboard.cpolar.com/get-started)注册(选免费套餐)，然后点验证，复制你的隧道 Authtoken
 
@@ -86,9 +86,9 @@ https://www.kaggle.com/code/xxxx/qqbot-simple-reforge-spawner
 ```
 这个【分享链接】我们待会会用到。
 ### 为持久化运行做准备
-多注册一些账号，记录好账号密码，同时每一个账号都需要完成手机号验证，否则无法使用。
+注册更多账号，记录好账号密码。
 
-等下我们会用到。
+**你注册的所有账号都需要能够通过 email+密码 登录，并且完成了手机号验证**
 
 验证码部分你可以找接码平台。
 ## 部署Achernar
