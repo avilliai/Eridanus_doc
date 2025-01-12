@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
 ---
-# AI作品检测
+# AI图片甄别
 检查图片是否为ai生成
 ## 指令
 ```yaml
