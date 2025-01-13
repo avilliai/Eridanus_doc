@@ -82,7 +82,7 @@ llm:
   enable_proxy: False
   gemini:         #https://ai.google.dev/
     api_keys:
-      - YOUR_API_KEY_1   #这里填入你的apikey，有几个填几个，只有一个的话，需要把下面的gemini-2.0-flash-exp删除。
+      - YOUR_API_KEY_1   #这里填入你的apikey，有几个填几个，多key填写示例如下。
       - YOUR_API_KEY_2
     model: gemini-2.0-flash-exp
     base_url: https://generativelanguage.googleapis.com #后面的/v1/beta什么的会自动填充
