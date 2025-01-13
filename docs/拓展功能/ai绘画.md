@@ -28,13 +28,22 @@ tag
 然后发送图片
 ### 重绘
 ```yaml
-重绘 prompt   #比如 重绘 1girl,solo,loli
+重绘 prompt   # 比如 重绘 1girl,solo,loli
+n3re prompt  # nai3重绘
+n4re prompt  # nai4重绘
 ```
 然后发送图片
+### 局部重绘
+```yaml
+局部重绘 prompt # sd局部重绘
+```
+然后先后发送图片和你蒙版过(用黑色覆盖你要重绘的地方)的图片
 ### 指令设置参数
 ```yaml
 setsd xxxx   #设置sd参数(比如setsd -w1024 -h1600就会把宽设为1024，高设为1600)
 setre xxxx   #设置重绘参数
+# 目前可用的参数:-w(宽，值要求为整数) -h(高，值要求为整数) -d(重绘幅度，0到1之间的小数)
+# setsd 0或setre 0可以回到默认设置
 ```
 ### 模型查询指令
 ```yaml
