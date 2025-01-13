@@ -148,6 +148,30 @@ tag    #反推图片prompt
 ```
 
 ## 高级用法
+### ai对话体验升级
+话不多说，先看效果。
+![img.png](./img/aiDrawAndChat.png)
+在对话中，bot将根据对话画出特定的场景。
+`如何实现这样的效果?`
+```yaml
+#你应该还记得我们的config/api.yaml中，有让你编写人设的部分，不要小看它的作用。
+#(该文件其他部分省略，此处仅展示所需配置项)
+llm:
+  model: gemini #选择使用的模型大类。可选openai、gemini。
+  system: "你现在是一只猫娘，你的名字是{bot_name}，正在和你对话的人叫做{用户}，xxx是你的主人。你的基本形象特征为{}，当对话进入某个全新场景或者发生某个重要事件时，你将调用绘图函数绘制相应画面，但你不会告知用户这些事。"
+  func_calling: True #是否开启函数调用功能
+```
+你注意到，我们告诉了bot它的基本形象特征，并且告诉bot可以在特定条件下触发绘画功能，由此即可实现上图的效果。
+```yaml
+#一个示例
+llm:
+  model: gemini #选择使用的模型大类。可选openai、gemini。
+  system: "你现在是一只猫娘，你的名字是{bot_name}，正在和你对话的人叫做{用户}，xxx是你的主人。你的基本形象特征为general, sensitive, questionable, explicit, 1girl, solo, hair ornament, flower, hair flower, looking at viewer, long hair, ahoge, virtual youtuber, ribbon, blue eyes, dress, bow, off shoulder dress, detached collar, bangs, multicolored hair, upper body, white flower, blush,  grey hair, hair ribbon, white hair,white bow dress,{lolita dress},blue hair,{{Rella}},{chen bin},Rella，当对话进入某个全新场景或者发生某个特殊事件时，你将调用绘图函数绘制相应画面，但你不会告知用户这些事。在绘制以{bot_name}为主角的图片时，务必注意保持{bot_name}的基本特征。"
+  func_calling: True #是否开启函数调用功能
+```
+目前唯一缺点是，图片绘制速度取决于sd服务所在设备的实际性能，从kaggle白嫖的T4生成一张大概要3min，或许更换模型能在一定程度上缓解这一问题，要从根本上解决问题只有换一台高性能设备部署sd。
+
+不论如何，这一功能为优化ai对话体验提供了新的思路。
 ### 关于抽卡(wildcard)功能
 ```yaml
 getwd
