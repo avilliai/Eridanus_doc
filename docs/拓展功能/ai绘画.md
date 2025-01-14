@@ -29,7 +29,7 @@ tag
 ### 重绘
 ```yaml
 重绘 prompt   # 比如 重绘 1girl,solo,loli
-n3re prompt  # nai3重绘
+n3re prompt  # nai3重绘，nai部分的重绘均为在prompt中随便一个地方加入横或方就会变成画横图和方图，默认竖图
 n4re prompt  # nai4重绘
 ```
 然后发送图片
@@ -192,9 +192,9 @@ llm:
 直接告诉bot要绘制的内容
 ### 关于抽卡(wildcard)功能
 ```yaml
-getwd
+getwd # 可以获得所有能够抽取的wildcard
+getwd xxx # 你给一串提示词，还给你抽卡处理过后的句子
 ```
-可以获得所有能够抽取的wildcard
 
 #### 注意:后面的wd指令是当作提示词用的
 ```yaml
