@@ -29,7 +29,7 @@ tag
 ### 重绘
 ```yaml
 重绘 prompt   # 比如 重绘 1girl,solo,loli
-n3re prompt  # nai3重绘
+n3re prompt  # nai3重绘，nai部分的重绘均为在prompt中随便一个地方加入横或方就会变成画横图和方图，默认竖图
 n4re prompt  # nai4重绘
 ```
 然后发送图片
@@ -44,6 +44,11 @@ setsd xxxx   #设置sd参数(比如setsd -w1024 -h1600就会把宽设为1024，�
 setre xxxx   #设置重绘参数
 # 目前可用的参数:-w(宽，值要求为整数) -h(高，值要求为整数) -d(重绘幅度，0到1之间的小数)
 # setsd 0或setre 0可以回到默认设置
+```
+### 重绘中断指令
+如果你在图片输入之前突然不想要重绘了，可以发送这条指令
+```yaml
+/clearre
 ```
 ### 模型查询指令
 ```yaml
@@ -157,7 +162,7 @@ tag    #反推图片prompt
 ```
 
 ## 高级用法
-### ai对话体验升级
+### ai对话体验优化
 话不多说，先看效果。
 ![img.png](./img/aiDrawAndChat.png)
 在对话中，bot将根据对话画出特定的场景。
@@ -167,7 +172,7 @@ tag    #反推图片prompt
 #(该文件其他部分省略，此处仅展示所需配置项)
 llm:
   model: gemini #选择使用的模型大类。可选openai、gemini。
-  system: "你现在是一只猫娘，你的名字是{bot_name}，正在和你对话的人叫做{用户}，xxx是你的主人。你的基本形象特征为{}，当对话进入某个全新场景或者发生某个重要事件时，你将调用绘图函数绘制相应画面。"
+  system: "你现在是一只猫娘，你的名字是{bot_name}，正在和你对话的人叫做{用户}，xxx是你的主人。你的基本形象特征为{}，当且仅当对话进入某个全新场景或者发生某个重要事件时，你将调用绘图函数绘制相应画面。"
   func_calling: True #是否开启函数调用功能
 ```
 你注意到，我们告诉了bot它的基本形象特征，并且告诉bot可以在特定条件下触发绘画功能，由此即可实现上图的效果。
@@ -175,12 +180,10 @@ llm:
 #一个示例
 llm:
   model: gemini #选择使用的模型大类。可选openai、gemini。
-  system: "你现在是一只猫娘，你的名字是{bot_name}，正在和你对话的人叫做{用户}，xxx是你的主人。你的基本形象特征为general, sensitive, questionable, explicit, 1girl, solo, hair ornament, flower, hair flower, looking at viewer, long hair, ahoge, virtual youtuber, ribbon, blue eyes, dress, bow, off shoulder dress, detached collar, bangs, multicolored hair, upper body, white flower, blush,  grey hair, hair ribbon, white hair,white bow dress,{lolita dress},blue hair,{{Rella}},{chen bin},Rella，当对话进入某个全新场景或者发生某个特殊事件时，你将调用绘图函数绘制相应画面。在绘制以{bot_name}为主角的图片时，务必注意保持{bot_name}的基本特征。"
+  system: "你现在是一只猫娘，你的名字是{bot_name}，正在和你对话的人叫做{用户}，xxx是你的主人。你的基本形象特征为general, sensitive, questionable, explicit, 1girl, solo, hair ornament, flower, hair flower, looking at viewer, long hair, ahoge, virtual youtuber, ribbon, blue eyes, dress, bow, off shoulder dress, detached collar, bangs, multicolored hair, upper body, white flower, blush,  grey hair, hair ribbon, white hair,white bow dress,{lolita dress},blue hair,{{Rella}},{chen bin},Rella，当且仅当对话进入某个全新场景时，你将调用绘图函数绘制相应画面。在绘制以{bot_name}为主角的图片时，务必注意保持{bot_name}的基本特征。"
   func_calling: True #是否开启函数调用功能
 ```
 目前唯一缺点是，图片绘制速度取决于sd服务所在设备的实际性能，从kaggle白嫖的T4生成一张大概要3min，或许更换模型能在一定程度上缓解这一问题，但要从根本上解决问题只有换一台高性能设备部署sd。
-
-不论如何，至少这一功能为优化ai对话体验提供了新的思路。
 ### 函数调用
 ```yaml
 llm:
@@ -189,9 +192,9 @@ llm:
 直接告诉bot要绘制的内容
 ### 关于抽卡(wildcard)功能
 ```yaml
-getwd
+getwd # 可以获得所有能够抽取的wildcard
+getwd xxx # 你给一串提示词，还给你抽卡处理过后的句子
 ```
-可以获得所有能够抽取的wildcard
 
 #### 注意:后面的wd指令是当作提示词用的
 ```yaml
