@@ -130,16 +130,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://your-qq-group-link',
-              },
-              {
-                label: 'QQ',
-                href: 'https://your-qq-group-link',
-              },
-              {
-                label: 'X',
-                href: 'https://your-qq-group-link',
+                label: 'QQ群',
+                href: 'https://qm.qq.com/q/M20ZqbS9qg',
               },
             ],
           },
@@ -147,8 +139,8 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'contributors',
+                to: 'https://github.com/avilliai/Eridanus/graphs/contributors',
               },
               {
                 label: 'GitHub',
