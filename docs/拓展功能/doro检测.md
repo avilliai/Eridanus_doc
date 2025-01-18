@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 12
 ---
 # 奶龙等角色检测
 目前支持检测奶龙和doro，需要更多建议找[spawner](https://github.com/spawner1145)。
