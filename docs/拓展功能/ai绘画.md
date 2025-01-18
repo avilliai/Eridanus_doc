@@ -41,11 +41,11 @@ n4re prompt  # nai4重绘
 # 在prompt中随便一个地方加入横或方或竖就会变成画横图或方图或竖图，默认方图
 ```
 然后先后发送图片和你蒙版过(用黑色覆盖你要重绘的地方)的图片
-### 指令设置参数
+### 指令设置参数（在后面还会讲到高级用法）
 ```yaml
-setsd xxxx   #设置sd参数(比如setsd -w1024 -h1600就会把宽设为1024，高设为1600)
+setsd xxxx   #设置sd参数(比如setsd --w 1024 --h 1600就会把宽设为1024，高设为1600)（注意空格和"--"）
 setre xxxx   #设置重绘参数
-# 目前可用的参数:-w(宽，值要求为整数) -h(高，值要求为整数) -d(重绘幅度，0到1之间的小数)
+# 目前可用的参数:--w(宽，值要求为整数) --h(高，值要求为整数) --d(重绘幅度，0到1之间的小数) --p(正向提示词) --n(负面提示词)
 # setsd 0或setre 0可以回到默认设置
 # 注:优先级是关键词中含有横或方或竖最高，其次你自定义的分辨率，nai相关部分不受自定义分辨率影响，同时自定义横和宽不能超过1600
 ```
@@ -258,6 +258,41 @@ getwd xxx # 你给一串提示词，还给你抽卡处理过后的句子
 ![image](https://github.com/user-attachments/assets/068b0d14-3572-4e69-843c-96758cd16a90)
 现在你的sd就可以用这些模型了，lora这种也是一样的，不过注意只有c站后面需要加token参数，如果你从别的网站链接下载，直接把链接搞过来就行
 
+现在你还可以通过把https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d变为[abcd]https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d从而将下载下来的文件命名为abcd（所以要注意重命名时后缀名！！！）
+
 在这里你可以更改你默认启动加载的模型和一些别的启动参数，自己探索吧
 ![image](https://github.com/user-attachments/assets/68addd0e-bd1e-49f4-8762-3ee83d62e395)
 
+### setsd和setre的参数重设
+基础的这里就不讲了，这里是一些进阶用法
+
+注意nai部分也可使用setsd和setre调整参数，只有分辨率不受影响
+
+接下来以setsd为例，setre同理
+
+重置指定项指令
+```yaml
+setsd --w 1024 --h
+```
+这里的--h后面没有定义值，所以高度会被重置回默认值
+
+重设正面或负面提示词
+```yaml
+setsd --p masterpiece,best quality,amazing quality,very aesthetic,absurdres,newest,
+```
+这上面的会把默认正面提示词设为masterpiece,best quality,amazing quality,very aesthetic,absurdres,newest,然后你以后每次画画的词加在这句话的前面
+
+
+但是我们有时候不想要输入的词在句首，那么我们可以用一个"{}"来表示你之后输入的词插入的位置
+```yaml
+setsd --p masterpiece,{},best quality,{},amazing quality,very aesthetic,absurdres,newest,
+```
+在上面的例子里，我们在两个地方插入了"{}"
+
+那么接下来，假设你使用了"画 1girl"
+
+实际上的整句话就是
+```yaml
+setsd --p masterpiece,1girl,best quality,1girl,amazing quality,very aesthetic,absurdres,newest,
+```
+注意，setsd和setre中的--p和--n参数不支持处理wildcard，所以不能在setsd和setre指令中出现wildcard
