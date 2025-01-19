@@ -307,3 +307,80 @@ setsd --p masterpiece,{},best quality,{},amazing quality,very aesthetic,absurdre
 masterpiece,1girl,best quality,1girl,amazing quality,very aesthetic,absurdres,newest,
 ```
 注意，setsd和setre中的--p和--n参数不支持处理wildcard，所以不能在setsd和setre指令中出现wildcard
+### kaggle双卡跑图
+在[spawner的脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)你可以看到这么一个地方
+![image](https://github.com/user-attachments/assets/7fd6613b-32a7-4576-87ca-e56f01ba78e7)
+上图可见一个use_webui1 = True的变量，这就是双卡跑图的开关
+
+默认的cpolar已经给你写好，当你开启双卡，便会自动开启两个隧道，本地端口分别为7860和7861
+
+假设两个cpolar网址分别是aaa 和 bbb
+```yaml
+  sdUrl: # 你自己搭建的sd，地址，示例http://127.0.0.1:17858（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
+    - 'aaa' 
+    - 'bbb'
+```
+这样你就接入了两个sd，这里的网址是可以无限加的，你api够就行，nai的key同理
+
+注意如果你是机器人调用建议把两个显卡的启动模型设成一样的，类似这样:
+```yaml
+usedCkpt = 'miaomiao_1_4.safetensors'
+
+args = [
+    '--port=7860',
+    '--api',
+    '--enc-pw=1234',
+    '--no-half-vae',
+    '--skip-torch-cuda-test',
+    f'--ckpt=models/Stable-diffusion/{usedCkpt}',
+    '--no-gradio-queue',
+    '--disable-nan-check',
+    '--no-hashing',
+    '--enable-insecure-extension-access',
+    '--no-gradio-queue',
+    '--xformers', # 强制使用 xformers 优化
+    '--device-id=0',
+    
+]
+
+# 双卡跑图设置在下面,端口为7861
+use_webui1 = True  # 是否启动双卡跑图
+
+usedCkpt1 = 'miaomiao_1_4.safetensors' #第二张卡的启动模型
+
+args1 = [
+    '--port=7861',
+    '--api',
+    '--enc-pw=1234',
+    '--no-half-vae',
+    '--skip-torch-cuda-test',
+    f'--ckpt=models/Stable-diffusion/{usedCkpt1}',
+    '--no-gradio-queue',
+    '--disable-nan-check',
+    '--no-hashing',
+    '--enable-insecure-extension-access',
+    '--no-gradio-queue',
+    '--xformers', # 强制使用 xformers 优化
+    '--device-id=1',# 第二张显卡
+    
+]
+
+# 自动压缩并输出设置
+compress_base_dir = "/kaggle/stable-diffusion-webui-reForge"  # 设置基础目录
+working_dir = "/kaggle/working/"
+interval = 200  # 压缩间隔时间（秒）
+```
+usedCkpt和usedCkpt1要保持一致
+
+注意在机器人的配置文件里的controller.yaml里的默认启动模型也要保持一致，否则调用切换模型先花半天
+```yaml
+ai绘画:
+  sd画图: true
+  sd默认启动模型: 'miaomiao_1_4.safetensors'
+  sd图片是否保存到生图端: true   #是否将生成的图片保存在webui的outputs里
+  novel_ai画图: true
+  no_nsfw_groups:               #禁止色图的群号
+  - 111
+  - 222
+  - 333
+```
