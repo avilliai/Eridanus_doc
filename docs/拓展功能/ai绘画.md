@@ -104,6 +104,9 @@ if cpolar_use:
     !wget -q -O - ipv4.icanhazip.com
     author = 'spawner'
 ```
+你也可以使用frp，在这一个格子的上面会有一个frp配置用的格子，把你ini文件的内容粘贴到引号部分就可以使用frp了
+
+注意frp本地端口需要为7860
 ### 设为公开脚本
 点击页面右上角的share，将脚本设置为公开，这是为了其他账号能够正常访问。
 ![img.png](./img/kaggle1.png)
