@@ -304,6 +304,6 @@ setsd --p masterpiece,{},best quality,{},amazing quality,very aesthetic,absurdre
 
 实际上的整句话就是
 ```yaml
-setsd --p masterpiece,1girl,best quality,1girl,amazing quality,very aesthetic,absurdres,newest,
+masterpiece,1girl,best quality,1girl,amazing quality,very aesthetic,absurdres,newest,
 ```
 注意，setsd和setre中的--p和--n参数不支持处理wildcard，所以不能在setsd和setre指令中出现wildcard
