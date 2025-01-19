@@ -377,7 +377,7 @@ usedCkpt和usedCkpt1要保持一致
 ai绘画:
   sd画图: true
   sd默认启动模型: 'miaomiao_1_4.safetensors'
-  sd图片是否保存到生图端: true   #是否将生成的图片保存在webui的outputs里
+  sd图片是否保存到生图端: false   #是否将生成的图片保存在webui的outputs里
   novel_ai画图: true
   no_nsfw_groups:               #禁止色图的群号
   - 111
