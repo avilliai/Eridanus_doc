@@ -294,11 +294,11 @@ setsd --p masterpiece,best quality,amazing quality,very aesthetic,absurdres,newe
 这上面的会把默认正面提示词设为masterpiece,best quality,amazing quality,very aesthetic,absurdres,newest,然后你以后每次画画的词加在这句话的前面
 
 
-但是我们有时候不想要输入的词在句首，那么我们可以用一个"{}"来表示你之后输入的词插入的位置
+但是我们有时候不想要输入的词在句首，那么我们可以用一个空的大括号来表示你之后输入的词插入的位置
 ```yaml
 setsd --p masterpiece,{},best quality,{},amazing quality,very aesthetic,absurdres,newest,
 ```
-在上面的例子里，我们在两个地方插入了"{}"
+在上面的例子里，我们在两个地方插入了大括号
 
 那么接下来，假设你使用了"画 1girl"
 
