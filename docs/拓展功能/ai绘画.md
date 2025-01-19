@@ -252,7 +252,9 @@ getwd xxx # 你给一串提示词，还给你抽卡处理过后的句子
 
 你会发现一个大大的下载按钮(不是create！)，对它右键，在弹出的窗口，你会看到复制链接这个选项，点击会复制链接下载链接，就像https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16
 
-这时候我们要用上我们刚才获得的api key，把网址变成https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d（这个token是假的）
+这时候我们要用上我们刚才获得的api key，把网址变成https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d
+
+（这个token是假的）
 
 可以发现，我们在原网址后面加了一个&token=你的api key，把它变成了一个新网址
 
@@ -261,7 +263,13 @@ getwd xxx # 你给一串提示词，还给你抽卡处理过后的句子
 ![image](https://github.com/user-attachments/assets/068b0d14-3572-4e69-843c-96758cd16a90)
 现在你的sd就可以用这些模型了，lora这种也是一样的，不过注意只有c站后面需要加token参数，如果你从别的网站链接下载，直接把链接搞过来就行
 
-现在你还可以通过把https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d变为[abcd]https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d从而将下载下来的文件命名为abcd（所以要注意重命名时后缀名！！！）
+现在你还可以通过把https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d
+
+变为
+
+[abcd]https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d
+
+从而将下载下来的文件命名为abcd（所以要注意重命名时后缀名！！！）
 
 在这里你可以更改你默认启动加载的模型和一些别的启动参数，自己探索吧
 ![image](https://github.com/user-attachments/assets/68addd0e-bd1e-49f4-8762-3ee83d62e395)
