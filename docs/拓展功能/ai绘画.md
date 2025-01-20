@@ -11,6 +11,13 @@ ai绘画:
   sd审核和反推api: ''        # 如果你的sd有反推插件https://github.com/spawner1145/stable-diffusion-webui-wd14-tagger.git，可以直接使用你的sdurl的api
   nai_key: ''
 ```
+配置文件`config/controller.yaml`
+```
+ai绘画:
+  sd画图: true
+  sd默认启动模型: 'miaomiao_1_4.safetensors'
+#kaggle云部署【双卡脚本】默认为miaomiao_1_4.safetensors,如使用【旧版脚本】需要填写为noobaiXLNAIXL_vPred10Version.safetensors
+```
 ## 指令
 ### novel_ai绘图指令
 ```yaml
@@ -167,6 +174,14 @@ ai绘画:
   sd审核和反推api: "http://127.0.0.1:3529/v0" #不能用就填v1
   nai_key: ""
 ```
+`config/controller.yaml`
+```
+ai绘画:
+  sd画图: true
+  sd默认启动模型: 'miaomiao_1_4.safetensors'
+#kaggle云部署【双卡脚本】默认为miaomiao_1_4.safetensors,如使用【旧版脚本】需要填写为noobaiXLNAIXL_vPred10Version.safetensors
+```
+
 重启Eridanus以重载配置文件。 
 
 至此，在Achernar获取到隧道地址且自动脚本完全启动后(大概需要十分钟)，你应该已经可以在群里使用
