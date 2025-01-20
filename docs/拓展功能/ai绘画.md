@@ -105,6 +105,9 @@ if cpolar_use:
     !wget -q -O - ipv4.icanhazip.com
     author = 'spawner'
 ```
+你也可以使用frp，在这一个格子的上面会有一个frp配置用的格子，把你ini文件的内容粘贴到引号部分就可以使用frp了
+
+注意frp本地端口需要为7860
 ### 设为公开脚本
 点击页面右上角的share，将脚本设置为公开，这是为了其他账号能够正常访问。
 ![img.png](./img/kaggle1.png)
@@ -252,7 +255,9 @@ getwd xxx # 你给一串提示词，还给你抽卡处理过后的句子
 
 你会发现一个大大的下载按钮(不是create！)，对它右键，在弹出的窗口，你会看到复制链接这个选项，点击会复制链接下载链接，就像https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16
 
-这时候我们要用上我们刚才获得的api key，把网址变成https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d（这个token是假的）
+这时候我们要用上我们刚才获得的api key，把网址变成https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d
+
+（这个token是假的）
 
 可以发现，我们在原网址后面加了一个&token=你的api key，把它变成了一个新网址
 
@@ -261,7 +266,13 @@ getwd xxx # 你给一串提示词，还给你抽卡处理过后的句子
 ![image](https://github.com/user-attachments/assets/068b0d14-3572-4e69-843c-96758cd16a90)
 现在你的sd就可以用这些模型了，lora这种也是一样的，不过注意只有c站后面需要加token参数，如果你从别的网站链接下载，直接把链接搞过来就行
 
-现在你还可以通过把https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d变为[abcd]https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d从而将下载下来的文件命名为abcd（所以要注意重命名时后缀名！！！）
+现在你还可以通过把https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d
+
+变为
+
+[abcd]https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d
+
+从而将下载下来的文件命名为abcd（所以要注意重命名时后缀名！！！）
 
 在这里你可以更改你默认启动加载的模型和一些别的启动参数，自己探索吧
 ![image](https://github.com/user-attachments/assets/68addd0e-bd1e-49f4-8762-3ee83d62e395)
@@ -286,16 +297,93 @@ setsd --p masterpiece,best quality,amazing quality,very aesthetic,absurdres,newe
 这上面的会把默认正面提示词设为masterpiece,best quality,amazing quality,very aesthetic,absurdres,newest,然后你以后每次画画的词加在这句话的前面
 
 
-但是我们有时候不想要输入的词在句首，那么我们可以用一个"{}"来表示你之后输入的词插入的位置
+但是我们有时候不想要输入的词在句首，那么我们可以用一个空的大括号来表示你之后输入的词插入的位置
 ```yaml
 setsd --p masterpiece,{},best quality,{},amazing quality,very aesthetic,absurdres,newest,
 ```
-在上面的例子里，我们在两个地方插入了"{}"
+在上面的例子里，我们在两个地方插入了大括号
 
 那么接下来，假设你使用了"画 1girl"
 
 实际上的整句话就是
 ```yaml
-setsd --p masterpiece,1girl,best quality,1girl,amazing quality,very aesthetic,absurdres,newest,
+masterpiece,1girl,best quality,1girl,amazing quality,very aesthetic,absurdres,newest,
 ```
 注意，setsd和setre中的--p和--n参数不支持处理wildcard，所以不能在setsd和setre指令中出现wildcard
+### kaggle双卡跑图
+在[spawner的脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)你可以看到这么一个地方
+![image](https://github.com/user-attachments/assets/7fd6613b-32a7-4576-87ca-e56f01ba78e7)
+上图可见一个use_webui1 = True的变量，这就是双卡跑图的开关
+
+默认的cpolar已经给你写好，当你开启双卡，便会自动开启两个隧道，本地端口分别为7860和7861
+
+假设两个cpolar网址分别是aaa 和 bbb
+```yaml
+  sdUrl: # 你自己搭建的sd，地址，示例http://127.0.0.1:17858（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
+    - 'aaa' 
+    - 'bbb'
+```
+这样你就接入了两个sd，这里的网址是可以无限加的，你api够就行，nai的key同理
+
+注意如果你是机器人调用建议把两个显卡的启动模型设成一样的，类似这样:
+```yaml
+usedCkpt = 'miaomiao_1_4.safetensors'
+
+args = [
+    '--port=7860',
+    '--api',
+    '--enc-pw=1234',
+    '--no-half-vae',
+    '--skip-torch-cuda-test',
+    f'--ckpt=models/Stable-diffusion/{usedCkpt}',
+    '--no-gradio-queue',
+    '--disable-nan-check',
+    '--no-hashing',
+    '--enable-insecure-extension-access',
+    '--no-gradio-queue',
+    '--xformers', # 强制使用 xformers 优化
+    '--device-id=0',
+    
+]
+
+# 双卡跑图设置在下面,端口为7861
+use_webui1 = True  # 是否启动双卡跑图
+
+usedCkpt1 = 'miaomiao_1_4.safetensors' #第二张卡的启动模型
+
+args1 = [
+    '--port=7861',
+    '--api',
+    '--enc-pw=1234',
+    '--no-half-vae',
+    '--skip-torch-cuda-test',
+    f'--ckpt=models/Stable-diffusion/{usedCkpt1}',
+    '--no-gradio-queue',
+    '--disable-nan-check',
+    '--no-hashing',
+    '--enable-insecure-extension-access',
+    '--no-gradio-queue',
+    '--xformers', # 强制使用 xformers 优化
+    '--device-id=1',# 第二张显卡
+    
+]
+
+# 自动压缩并输出设置
+compress_base_dir = "/kaggle/stable-diffusion-webui-reForge"  # 设置基础目录
+working_dir = "/kaggle/working/"
+interval = 200  # 压缩间隔时间（秒）
+```
+usedCkpt和usedCkpt1要保持一致
+
+注意在机器人的配置文件里的controller.yaml里的默认启动模型也要保持一致，否则调用切换模型先花半天
+```yaml
+ai绘画:
+  sd画图: true
+  sd默认启动模型: 'miaomiao_1_4.safetensors'
+  sd图片是否保存到生图端: false   #是否将生成的图片保存在webui的outputs里
+  novel_ai画图: true
+  no_nsfw_groups:               #禁止色图的群号
+  - 111
+  - 222
+  - 333
+```
