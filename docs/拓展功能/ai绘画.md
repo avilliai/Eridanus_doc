@@ -7,7 +7,7 @@ sidebar_position: 5
 ```yaml
 ai绘画:
   sdUrl:
-  - '' #你自己搭建的sd，地址，示例http://127.0.0.1:17858/v0（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
+  - '' #你自己搭建的sd，地址，示例http://127.0.0.1:17858（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
   sd审核和反推api: ''        # 如果你的sd有反推插件https://github.com/spawner1145/stable-diffusion-webui-wd14-tagger.git，可以直接使用你的sdurl的api
   nai_key: ''
 ```
