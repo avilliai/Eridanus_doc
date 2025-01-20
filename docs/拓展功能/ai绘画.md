@@ -154,7 +154,9 @@ cpolar:
 `config/api.yaml`
 ```yaml
 ai绘画:
-  sdUrl: "http://127.0.0.1:3529" 
+  sdUrl: 
+  - "http://127.0.0.1:3529/v0" 
+  - "http://127.0.0.1:3529/v1"
   sd审核和反推api: "http://127.0.0.1:3529"
   nai_key: ""
 ```
