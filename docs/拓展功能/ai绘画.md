@@ -89,6 +89,7 @@ getwd
 打开[spawner的脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，点击白色的copy&edit，跳转到新页面后往下划拉。
 
 (这里其他人的脚本理论上也可以用)
+[旧版脚本](https://www.kaggle.com/code/lzrea06/qqbot-sd) 如果上面的不能用。
 ![img.png](./img/kaggle.png)
 把图中的`cpolar密钥`换成你上面申请的隧道AuthToken，看起来应该是这样
 ```python
