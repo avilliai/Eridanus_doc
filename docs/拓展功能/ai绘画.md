@@ -6,7 +6,8 @@ sidebar_position: 5
 配置文件`config/api.yaml`
 ```yaml
 ai绘画:
-  sdUrl: '' #你自己搭建的sd，地址，示例http://127.0.0.1:17858（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
+  sdUrl:
+  - '' #你自己搭建的sd，地址，示例http://127.0.0.1:17858/v0（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
   sd审核和反推api: ''        # 如果你的sd有反推插件https://github.com/spawner1145/stable-diffusion-webui-wd14-tagger.git，可以直接使用你的sdurl的api
   nai_key: ''
 ```
@@ -86,10 +87,13 @@ getwd
 
 记录你的cpolar密钥 即隧道AuthToken，比如`YTMgojjgnagtnbvjppf`(这是我乱打的，你并不能偷懒直接拿去用)
 ### kaggle脚本修改
-打开[spawner的脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，点击白色的copy&edit，跳转到新页面后往下划拉。
+二选一。
+
+[双卡脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，点击白色的copy&edit，跳转到新页面后往下划拉。
 
 (这里其他人的脚本理论上也可以用)
-[旧版脚本](https://www.kaggle.com/code/lzrea06/qqbot-sd) 如果上面的不能用。
+
+[旧版脚本](https://www.kaggle.com/code/lzrea06/qqbot-simple-reforge-spawner-bfef6d) 如果上面的双卡脚本不能用。
 ![img.png](./img/kaggle.png)
 把图中的`cpolar密钥`换成你上面申请的隧道AuthToken，看起来应该是这样
 ```python
@@ -158,8 +162,8 @@ cpolar:
 ```yaml
 ai绘画:
   sdUrl: 
-  - "http://127.0.0.1:3529/v0" 
-  - "http://127.0.0.1:3529/v1"  #取决于Achernar，哪个没启动就删掉哪个。注意是删整行。
+  - "http://127.0.0.1:3529/v0"  #【旧版脚本】只写这一个就行了。
+  - "http://127.0.0.1:3529/v1"  #【双卡脚本】需要加上这个
   sd审核和反推api: "http://127.0.0.1:3529/v0" #不能用就填v1
   nai_key: ""
 ```
