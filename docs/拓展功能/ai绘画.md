@@ -7,7 +7,7 @@ sidebar_position: 5
 ```yaml
 ai绘画:
   sdUrl:
-  - '' #你自己搭建的sd，地址，示例http://127.0.0.1:17858（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
+  - '' #你自己搭建的sd，地址，示例http://127.0.0.1:3529（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
   sd审核和反推api: ''        # 如果你的sd有反推插件https://github.com/spawner1145/stable-diffusion-webui-wd14-tagger.git，可以直接使用你的sdurl的api
   nai_key: ''
 ```
@@ -94,7 +94,7 @@ getwd
 
 记录你的cpolar密钥 即隧道AuthToken，比如`YTMgojjgnagtnbvjppf`(这是我乱打的，你并不能偷懒直接拿去用)
 ### kaggle脚本修改
-二选一(个人建议先旧版脚本，双卡脚本目前仍在完善。)
+二选一(个人建议先用旧版脚本，双卡脚本目前仍在完善。)
 
 [双卡脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，【速度】快，双卡并用榨干kaggle，均衡负载，出图较快。
 
@@ -169,9 +169,8 @@ cpolar:
 ```yaml
 ai绘画:
   sdUrl: 
-  - "http://127.0.0.1:3529/v0"  #【旧版脚本】只写这一个就行了。
-  - "http://127.0.0.1:3529/v1"  #【双卡脚本】需要加上这个
-  sd审核和反推api: "http://127.0.0.1:3529/v0" #不能用就填v1
+  - "http://127.0.0.1:3529"  #只写这一个就行了。
+  sd审核和反推api: "http://127.0.0.1:3529" #不能用就填
   nai_key: ""
 ```
 `config/controller.yaml`
@@ -336,7 +335,7 @@ masterpiece,1girl,best quality,1girl,amazing quality,very aesthetic,absurdres,ne
 
 默认的cpolar已经给你写好，当你开启双卡，便会自动开启两个隧道，本地端口分别为7860和7861
 
-假设两个cpolar网址分别是aaa 和 bbb
+假设两个sd服务网址分别是aaa 和 bbb
 ```yaml
   sdUrl: # 你自己搭建的sd，地址，示例http://127.0.0.1:17858（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
     - 'aaa' 
