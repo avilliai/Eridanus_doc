@@ -94,7 +94,7 @@ getwd
 
 记录你的cpolar密钥 即隧道AuthToken，比如`YTMgojjgnagtnbvjppf`(这是我乱打的，你并不能偷懒直接拿去用)
 ### kaggle脚本修改
-二选一(个人建议先用旧版脚本，双卡脚本目前仍在完善。)
+二选一(个人建议先用旧版脚本，双卡脚本的适配工作目前并未完成。)
 
 [双卡脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，【速度】快，双卡并用榨干kaggle，均衡负载，出图较快。
 
@@ -170,7 +170,7 @@ cpolar:
 ai绘画:
   sdUrl: 
   - "http://127.0.0.1:3529"  #只写这一个就行了。
-  sd审核和反推api: "http://127.0.0.1:3529" #不能用就填
+  sd审核和反推api: "http://127.0.0.1:3529" #和sd一样。
   nai_key: ""
 ```
 `config/controller.yaml`
