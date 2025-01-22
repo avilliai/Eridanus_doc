@@ -6,7 +6,8 @@ sidebar_position: 5
 配置文件`config/api.yaml`
 ```yaml
 ai绘画:
-  sdUrl: '' #你自己搭建的sd，地址，示例http://127.0.0.1:17858（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
+  sdUrl:
+    - '' #你自己搭建的sd，地址，示例http://127.0.0.1:3529（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/'' 
   sd审核和反推api: ''        # 如果你的sd有反推插件https://github.com/spawner1145/stable-diffusion-webui-wd14-tagger.git，可以直接使用你的sdurl的api
   nai_key: ''
 ```
@@ -86,10 +87,13 @@ getwd
 
 记录你的cpolar密钥 即隧道AuthToken，比如`YTMgojjgnagtnbvjppf`(这是我乱打的，你并不能偷懒直接拿去用)
 ### kaggle脚本修改
-打开[spawner的脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，点击白色的copy&edit，跳转到新页面后往下划拉。
+二选一(个人建议先用旧版脚本，双卡脚本的适配工作目前并未完成。)
 
-(这里其他人的脚本理论上也可以用)
-[旧版脚本](https://www.kaggle.com/code/lzrea06/qqbot-sd) 如果上面的不能用。
+[双卡脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，【速度】快，双卡并用榨干kaggle，均衡负载，出图较快。
+
+[旧版脚本](https://www.kaggle.com/code/lzrea06/qqbot-simple-reforge-spawner-bfef6d) 【稳定】，默认加载模型绘图效果好，出图较慢。
+
+打开脚本后，点击白色的copy&edit，跳转到新页面后往下划拉。
 ![img.png](./img/kaggle.png)
 把图中的`cpolar密钥`换成你上面申请的隧道AuthToken，看起来应该是这样
 ```python
@@ -129,21 +133,17 @@ Achernar是Eridanus的派生项目。参照readme.md部署。
 
 ### 编辑Achernar配置文件
 `Achernar/config.yaml`
-
-**如果你使用了代理，并且不是pac自动分流或者你的pac无效，那么建议填写quest_proxy。**
 ```yaml
 proxy: ""     #没用，不用管这一项
-quest_proxy: ""  #sd api请求时使用的代理地址，如果开启代理后，Achernar反代不能正常工作请填写此项。你代理软件的http代理地址。
 port: 3529
 headless: true #是否开启浏览器无头模式，低配服务器建议开启。
 #在shared_notebook填入记录的你的【分享链接】
 shared_notebook: ""
-#以下为默认配置项，一般不用改
 enable_kaggle_extension: true
 enable_cpolar_extension: true
 cpolar_check_interval: 360
 kaggle_change_account_interval: 36000
-#填写你的账号。
+
 kaggle_accounts:
   - email: "你的邮箱"
     password: "你的密码"
@@ -161,9 +161,9 @@ cpolar:
 `config/api.yaml`
 ```yaml
 ai绘画:
-  sdUrl: 
-  - "http://127.0.0.1:3529"  #Achernar，反代地址。你可以继续增加其他服务端地址。
-  sd审核和反推api: "http://127.0.0.1:3529" 
+  sdUrl:
+    - "http://127.0.0.1:3529"  #Achernar，反代地址。你可以继续增加其他服务端地址。
+  sd审核和反推api: "http://127.0.0.1:3529"
   nai_key: ""
 ```
 重启Eridanus以重载配置文件。 
@@ -320,7 +320,7 @@ masterpiece,1girl,best quality,1girl,amazing quality,very aesthetic,absurdres,ne
 
 默认的cpolar已经给你写好，当你开启双卡，便会自动开启两个隧道，本地端口分别为7860和7861
 
-假设两个cpolar网址分别是aaa 和 bbb。**用Achernar的话，就不用管这部分，按照上面的只填http://127.0.0.1:3529就行了。**
+假设两个cpolar网址分别是aaa 和 bbb
 ```yaml
   sdUrl: # 你自己搭建的sd，地址，示例http://127.0.0.1:17858（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/
     - 'aaa' 
