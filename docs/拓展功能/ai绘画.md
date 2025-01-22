@@ -134,15 +134,17 @@ Achernar是Eridanus的派生项目。参照readme.md部署。
 ### 编辑Achernar配置文件
 `Achernar/config.yaml`
 ```yaml
-proxy: ""     #没用，不用管这一项
+#下面这两个代理项，一般不用配置。代理软件开规则代理完全够用。
+proxy: ""     #登录kaggle时使用的代理。
+quest_proxy: ""  #sd api请求时使用的代理地址，如果开启代理后，Achernar反代不能正常工作请填写此项。你代理软件的http代理地址。
 port: 3529
 headless: true #是否开启浏览器无头模式，低配服务器建议开启。
 #在shared_notebook填入记录的你的【分享链接】
 shared_notebook: ""
 enable_kaggle_extension: true
 enable_cpolar_extension: true
-cpolar_check_interval: 360
-kaggle_change_account_interval: 36000
+cpolar_check_interval: 180
+kaggle_change_account_interval: 39600
 
 kaggle_accounts:
   - email: "你的邮箱"
@@ -152,6 +154,7 @@ kaggle_accounts:
 cpolar:
   email: "cpolar的邮箱"
   password: "cpolar的密码"
+
 
 ```
 **运行Achernar主程序**
@@ -165,6 +168,18 @@ ai绘画:
     - "http://127.0.0.1:3529"  #Achernar，反代地址。你可以继续增加其他服务端地址。
   sd审核和反推api: "http://127.0.0.1:3529"
   nai_key: ""
+```
+`config/controller.yaml`
+```yaml
+ai绘画:
+  sd画图: true
+  sd默认启动模型: 'miaomiao_1_4.safetensors'  #【旧版脚本】填noobaiXLNAIXL_vPred10Version.safetensors，【双卡脚本】填miaomiao_1_4.safetensors。
+  sd图片是否保存到生图端: false   #是否将生成的图片保存在webui的outputs里
+  novel_ai画图: true
+  no_nsfw_groups:               #禁止色图的群号
+  - 111
+  - 222
+  - 333
 ```
 重启Eridanus以重载配置文件。 
 
@@ -314,6 +329,8 @@ masterpiece,1girl,best quality,1girl,amazing quality,very aesthetic,absurdres,ne
 ```
 注意，setsd和setre中的--p和--n参数不支持处理wildcard，所以不能在setsd和setre指令中出现wildcard
 ### kaggle双卡跑图
+**使用【双卡脚本】+最新版【Achernar】可以不用看这里，默认支持。**。
+
 在[spawner的脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)你可以看到这么一个地方
 ![image](https://github.com/user-attachments/assets/7fd6613b-32a7-4576-87ca-e56f01ba78e7)
 上图可见一个use_webui1 = True的变量，这就是双卡跑图的开关
