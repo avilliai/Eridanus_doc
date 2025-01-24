@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 ---
-# JMComic&asmr功能
+# JMComic/asmr/iwara(r18类功能)
 ## jmcomic功能
 **此功能需要配置proxy**。
 ### 验车
@@ -24,6 +24,10 @@ jm搜{关键字}
 需要安装ffmepg，并配置好环境变量。
 
 预计之后会将ffmepg的一键安装包并入Eridanus整合包。
+
+此功能需要配置卡片签名，卡片签名地址：https://ss.xingzhige.com/music_card/card
+
+napcat和llob都有配置卡片签名的地方，自己找。
 ### 指令
 ```yaml
 随机奥术
@@ -44,4 +48,12 @@ asmr:
 resource_search:   #资源搜索功能
   asmr:
     asmr_level: 0  #设置权限。
+```
+## iwara功能
+```yaml
+iwara搜{关键字}   #比如 iwara搜菲比
+iwara下载{视频id}  #比如 iwara下载ciGDn8TIwYvfgR
+iwara最新
+iwara热门
+iwara趋势
 ```
