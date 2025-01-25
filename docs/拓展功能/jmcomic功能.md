@@ -1,9 +1,9 @@
 ---
 sidebar_position: 7
 ---
-# JMComic/asmr/iwara(r18类功能)
+# JMComic/asmr/iwara
 ## jmcomic功能
-**此功能需要配置proxy**。
+**此功能需要配置`api.yaml.proxy.http_proxy`**。
 ### 验车
 ```yaml
 验车1046487
