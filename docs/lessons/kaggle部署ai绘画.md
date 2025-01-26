@@ -81,7 +81,7 @@ git clone --depth 1 https://mirror.ghproxy.com/https://github.com/avilliai/Acher
 其他镜像源(推荐)  
 git clone --depth 1 https://github.moeyy.xyz/https://github.com/avilliai/Achernar
 ```
-不会用git自己看[avilliai/Achernar: kaggle账号自动切换+运行项目/cpolar隧道本地反向代理](https://github.com/avilliai/Achernar)有个绿色按钮，点了下载zip压缩包。
+不会用git自己看[avilliai/Achernar: kaggle账号自动切换+运行项目/cpolar隧道本地反向代理](https://github.com/avilliai/Achernar)页面右上角有个绿色按钮，点了下载zip压缩包。
 ### 安装python
 [安装python3.11](https://mirrors.huaweicloud.com/python/3.11.0/python-3.11.0-amd64.exe)
 
@@ -91,13 +91,12 @@ git clone --depth 1 https://github.moeyy.xyz/https://github.com/avilliai/Acherna
 
 ### 编辑Achernar配置文件
 `Achernar/config.yaml`
-```yaml  
-#下面这两个代理项，一般不用配置。代理软件开规则代理完全够用。  
-proxy: ""     #登录kaggle时使用的代理。  
-quest_proxy: ""  #sd api请求时使用的代理地址，如果开启代理后，Achernar反代不能正常工作请填写此项。你代理软件的http代理地址。取决于具体情况，clash一般http://127.0.0.1:7890  
-port: 3529  
-headless: true   #是否开启浏览器无头模式，低配服务器建议开启。  
-#在shared_notebook填入记录的你的【分享链接】  
+```yaml
+proxy: ""     #frp不用管。登录kaggle时使用的代理。  
+quest_proxy: ""  #frp不用管。sd api请求时使用的代理地址，如果开启代理后，Achernar反代不能正常工作请填写此项。你代理软件的http代理地址。取决于具体情况，clash一般http://127.0.0.1:7890  
+port: 3529       
+headless: true   
+#在shared_notebook填入你记录的【分享链接】  
 shared_notebook: ""  
 enable_kaggle_extension: true  
 enable_cpolar_extension: true    #使用frp就将这个改成false
@@ -125,7 +124,7 @@ cpolar:                  #使用frp不用填
 ai绘画:  
   sdUrl:    
   - "http://hb.fuck.you:114514"  #在frp配置步骤记录的【连接地址】(加上http://)
-  sd审核和反推api: "http://hb.fuck.you:114514"  
+  sd审核和反推api: "http://hb.fuck.you:114514"   #和上面的一样
   nai_key: ""  
 ```  
 ### 如使用cpolar
