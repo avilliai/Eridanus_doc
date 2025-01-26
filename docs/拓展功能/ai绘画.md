@@ -72,7 +72,7 @@ dan {你要查的tag，可以是各种语言}
 ```yaml
 getwd
 ```
-## 云部署ai绘画服务
+## 云部署ai绘画服务(必看)
 利用kaggle的免费算力，部署ai绘画服务。
 
 [教程](https://eridanus-doc.netlify.app/docs/lessons/kaggle%E9%83%A8%E7%BD%B2ai%E7%BB%98%E7%94%BB)
