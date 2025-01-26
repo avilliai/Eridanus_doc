@@ -6,7 +6,7 @@ kaggle每周有30h免费gpu时长，每个脚本一次可以运行12h，所以�
 
 [kaggle注册](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，记得`在profile界面`  **绑定手机号**，不然用不了gpu和联网。
 ## kaggle脚本修改
-**脚本二选一(建议【旧版脚本】)**
+**脚本二选一(建议旧版脚本)**
 
 **frp和cpolar二选一(建议frp)**
 
