@@ -73,7 +73,7 @@ dan {你要查的tag，可以是各种语言}
 getwd
 ```
 ## 白嫖kaggle ai绘画
-
+[教程](https://eridanus-doc.netlify.app/docs/lessons/kaggle%E9%83%A8%E7%BD%B2ai%E7%BB%98%E7%94%BB)
 ## 高级用法
 ### ai对话体验优化
 话不多说，先看效果。

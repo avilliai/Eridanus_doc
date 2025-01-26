@@ -4,24 +4,22 @@ sidebar_position: 1
 # kaggle白嫖ai绘画
 下面的教程将带你实现白嫖kaggle的gpu资源。
 ## kaggle注册登录
-[kaggle](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)
-
-记得`在profile界面`  **绑定手机号**，不然用不了gpu和联网。
+[kaggle官网](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，记得`在profile界面`  **绑定手机号**，不然用不了gpu和联网。
 ## kaggle脚本修改(二选一)
-二选一(建议用旧版脚本，双卡脚本的适配工作目前并未完成。)
+**脚本二选一(建议【旧版脚本】)，frp和cpolar二选一(建议frp)**
 
 [双卡脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner) 【速度】快，双卡并用榨干kaggle，均衡负载，出图较快。
 
 [旧版脚本](https://www.kaggle.com/code/lzrea06/qqbot-simple-reforge-spawner-bfef6d) 【稳定】，默认加载模型绘图效果好，出图较慢。
 ### 使用frp
-免费frp有很多，以[chml]([ChmlFrp | Panel v2 - 免费,高速,稳定,不限流量的端口映射工具。](https://panel.chmlfrp.cn/tunnelm/manage))为例。在他的官网注册登录，并完成实名验证。
+免费frp有很多，以[chml](https://panel.chmlfrp.cn/tunnelm/manage)为例。在其官网注册登录，并完成实名验证。
 ![fc8578c69e33882d300b258902051516.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/fc8578c69e33882d300b258902051516.png)
 ![image.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/20250126101517.png)
 
 ![image.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/20250126101914.png)
 好的，你现在得到了frp配置文件，它看起来如上图，让我们回到kaggle。
 
-打开【脚本】后，点击白色的copy&edit，跳转到新页面后往下划拉。  
+打开【脚本】后，点击白色的copy&edit，跳转到新页面后你可以看到：  
 ![image.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/20250126102141.png)
 用你刚刚复制的配置文件内容替换掉这一坨。
 
