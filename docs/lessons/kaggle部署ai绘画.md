@@ -1,12 +1,14 @@
 ---
 sidebar_position: 1
 ---
-# kaggle白嫖ai绘画
+# kaggle部署ai绘画服务
 下面的教程将带你实现白嫖kaggle的gpu资源。
-## kaggle注册登录
-[kaggle官网](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，记得`在profile界面`  **绑定手机号**，不然用不了gpu和联网。
-## kaggle脚本修改(二选一)
-**脚本二选一(建议【旧版脚本】)，frp和cpolar二选一(建议frp)**
+
+[先注册登录kaggle](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，记得`在profile界面`  **绑定手机号**，不然用不了gpu和联网。
+## kaggle脚本修改
+**脚本二选一(建议【旧版脚本】)**
+
+**frp和cpolar二选一(建议frp)**
 
 [双卡脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner) 【速度】快，双卡并用榨干kaggle，均衡负载，出图较快。
 
