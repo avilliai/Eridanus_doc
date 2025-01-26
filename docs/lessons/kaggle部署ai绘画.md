@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 # kaggle部署ai绘画服务
-下面的教程将带你实现白嫖kaggle的gpu资源。
+kaggle每周有30h免费gpu时长，每个脚本一次可以运行12h，所以当你有7个号的时候，就可以无限续杯了。
 
-[先注册登录kaggle](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，记得`在profile界面`  **绑定手机号**，不然用不了gpu和联网。
+[kaggle注册](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，记得`在profile界面`  **绑定手机号**，不然用不了gpu和联网。
 ## kaggle脚本修改
 **脚本二选一(建议【旧版脚本】)**
 
