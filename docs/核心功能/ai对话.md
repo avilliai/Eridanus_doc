@@ -68,9 +68,9 @@ llm:
 如开启函数调用，可直接告诉bot【清理当前对话】
 master也可使用【清理所有人的对话记录】之类的话来清理所有人的对话记录。
 ```
-## 申请apikey
-### gemini配置方式
-#### 1、获取gemini apikey
+
+## gemini配置方式
+### 1、获取gemini apikey
 [先获取Gemini apikey](https://ai.google.dev/tutorials/setup?hl=zh-cn) (获取过程需要开启代理，打不开/地区不可用就是你机场不行。)
 
 打开config/api.yaml
@@ -87,9 +87,9 @@ llm:
     model: gemini-2.0-flash-exp
     base_url: https://generativelanguage.googleapis.com #后面的/v1/beta什么的会自动填充
 ```
-#### 2、配置正向代理/反向代理(二选一)
+### 2、配置正向代理/反向代理(二选一)
 只配置apikey，但不配置proxy是不行的。
-##### 反向代理
+#### 反向代理
 反向代理配置难度较低，建议使用。
 ```yaml
 一些你可以使用的反代地址，不保证全都能用。
@@ -112,7 +112,7 @@ llm:
   gemini:    
     base_url: https://mellifluous-cupcake-ea08ad.netlify.app  #填写了一个反代地址
 ```
-##### 正向代理
+#### 正向代理
 取决于你自己的代理软件，我不能给你一个准确答案。如果你看不懂就老老实实用反代。
 ```yaml
 #省略了其他配置项，不代表你可以随便删除其他配置项。
@@ -121,13 +121,38 @@ llm:
 proxy:
   http_proxy: "http://127.0.0.1:10809"  #本地代理软件的的http代理端口。
 ```
-### open标准模型配置方式
+## openai接口标准模型配置方式
 文心、讯飞星火、chatglm、豆包、kimi都可以使用此配置方式
 
-不再赘述。爱折腾这块的多少都知道怎么做。
-#### 代理
+兼容openai接口标准的模型配置方式都是大差不差，每个都写就是纯纯浪费时间，接下来教程以deepseek为例，希望你能够举一反三。
+### 接入deepseek
+在[deepseek文档](https://api-docs.deepseek.com/zh-cn/)我们可以看到
 ```yaml
-llm:
-  enable_proxy: False
+DeepSeek API 使用与 OpenAI 兼容的 API 格式，通过修改配置，您可以使用 OpenAI SDK 来访问 DeepSeek API，或使用与 OpenAI API 兼容的软件。
 ```
-部分模型的使用，需要配置代理。当你配置了proxy中的http_proxy后，启用此项，bot将自动使用你配置的代理。
+|PARAM|VALUE|
+| --- | --- |
+|base_url|https://api.deepseek.com|
+|api_key|apply for an [API key](https://platform.deepseek.com/api_keys)|
+
+得到的信息如下
+- 1.deepseek支持openai接口标准
+- 2.base_url为https://api.deepseek.com
+- 3.api_key申请地址为https://platform.deepseek.com/api_keys
+
+先去[申请apikey](https://platform.deepseek.com/api_keys)，得到`sk-da75a***********************6f47`
+
+然后在config/api.yaml中配置
+```yaml
+#这里省略了其他配置项，不代表你可以随便删除其他配置项。
+llm:
+  model: openai #模型大类选择openai。
+  system: "你现在是一只猫娘，你的名字是{bot_name}，我的名字是{用户}，是你的主人。"
+  func_calling: false #不知道deepseek是否支持函数调用功能，关了省事。
+  openai:        
+    api_keys:   #继续像这样添加apikey
+      - sk-da75a***********************6f47 #这是个示例，你需要替换为你自己申请的apikey
+    model: deepseek-chat #选择使用的模型，这里是deepseek-chat，其他模型需要查看deepseek文档。
+    #在请求地址部分，一般都是base_url+/v1/chat/completions
+    quest_url: https://api.deepseek.com/v1/chat/completions   #完整调用地址。只填base_url不行
+```
