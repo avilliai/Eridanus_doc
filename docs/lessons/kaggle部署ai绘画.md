@@ -65,13 +65,11 @@ https://www.kaggle.com/code/xxxx/qqbot-simple-reforge-spawner
 ```  
 这个【分享链接】我们待会会用到。
 ## 更多备用账号
-注册更多账号，记录好账号密码。
-
-**你注册的所有账号都需要能够通过 email+密码 登录，并且完成了手机号验证**
+注册更多账号，记录好账号密码。**你注册的所有账号都需要能够通过 email+密码 登录，并且完成了手机号验证**
 
 验证码部分你可以找[接码平台](https://sms-activate.guru/en/email-activations)。
 
-**这些账号注册后，只要完成手机号验证就好了，不用别的操作。**
+**这些账号注册后，只要完成手机号验证就可以，不用别的操作。** 但要注意，不要出现同一台设备同时登陆了两个kaggle账号的情况，可能会被封，换号时注意退出登录。
 ## 部署Achernar
 [Achernar](https://github.com/avilliai/Achernar)
 
