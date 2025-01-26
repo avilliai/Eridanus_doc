@@ -166,3 +166,5 @@ ai绘画:
 tag    #反推图片prompt  
 重绘 xxxx
 ```
+
+Achernar的原型脚本和kaggle脚本均来自[spawner](https://github.com/spawner1145)
