@@ -156,3 +156,4 @@ llm:
     #在请求地址部分，一般都是base_url+/v1/chat/completions
     quest_url: https://api.deepseek.com/v1/chat/completions   #完整调用地址。只填base_url不行
 ```
+假如存在网络问题需要配置代理，请查阅【gemini配置正向代理】，这里是通用的。
