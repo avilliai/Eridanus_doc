@@ -14,7 +14,7 @@ kaggle每周有30h免费gpu时长，每个脚本一次可以运行12h，所以�
 
 [旧版脚本](https://www.kaggle.com/code/lzrea06/qqbot-simple-reforge-spawner-bfef6d) 【稳定】，默认加载模型绘图效果好，出图较慢。
 ### 使用frp
-免费frp有很多，以[chml](https://panel.chmlfrp.cn/tunnelm/manage)为例。在其官网注册登录，并完成实名验证。
+免费frp有很多，以[chml](https://panel.chmlfrp.cn/tunnelm/manage)为例。在其官网注册登录，并完成实名验证(怕个人信息泄漏的换别的frp服务也行，流程基本一样)。
 ![fc8578c69e33882d300b258902051516.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/fc8578c69e33882d300b258902051516.png)
 ![image.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/20250126101517.png)
 
