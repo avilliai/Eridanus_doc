@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 # Lesson 1: 基本yaml语法
 大部分用户并没有耐心也没有必要去[runoob.com](https://www.runoob.com/w3cnote/yaml-intro.html) 学习yaml语法，而事实上，就使用Eridanus所需要的yaml语法掌握程度而言，您只需要通过耗费几分钟阅读本节，就可以避免很多不必要的麻烦。
