@@ -32,6 +32,8 @@ napcat和llob都有配置卡片签名的地方，自己找。
 ```yaml
 随机奥术
 随机asmr
+最新asmr
+热门asmr
 ```
 该功能支持函数调用，你可以直接告诉bot你想听asmr。
 ### 配置
