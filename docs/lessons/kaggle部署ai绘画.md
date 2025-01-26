@@ -36,7 +36,7 @@ http://hb.fuck.you:114514  #加上了http://
 ### 使用cpolar
 去[cpolar](https://dashboard.cpolar.com/get-started)注册(选免费套餐)，然后点验证，复制你的隧道 Authtoken ，比如`YTMgojjgnagtnbvjppf`(这是我乱打的，你并不能偷懒直接拿去用)
 
-打开【脚本】后，点击白色的copy&edit，跳转到新页面后往下划拉。  
+打开【脚本】后，点击白色的copy&edit，跳转到新页面后往下找到：
 ![kaggle.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/kaggle.png)
 
 把图中的`cpolar密钥`换成你上面申请的隧道AuthToken，看起来应该是这样
