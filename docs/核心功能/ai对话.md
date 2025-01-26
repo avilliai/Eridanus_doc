@@ -135,7 +135,7 @@ DeepSeek API 使用与 OpenAI 兼容的 API 格式，通过修改配置，您可
 |base_url|https://api.deepseek.com|
 |api_key|apply for an [API key](https://platform.deepseek.com/api_keys)|
 
-得到的信息如下
+**得到的信息如下**
 - 1.deepseek支持openai接口标准
 - 2.base_url为https://api.deepseek.com
 - 3.api_key申请地址为https://platform.deepseek.com/api_keys
@@ -157,3 +157,47 @@ llm:
     quest_url: https://api.deepseek.com/v1/chat/completions   #完整调用地址。只填base_url不行
 ```
 假如存在网络问题需要配置代理，请查阅【gemini配置正向代理】，这里是通用的。
+### 接入kimi
+阅读[kimi文档](https://platform.moonshot.cn/docs/guide/migrating-from-openai-to-kimi#%E5%85%B3%E4%BA%8E-api-%E5%85%BC%E5%AE%B9%E6%80%A7)，我们可以看到：
+```yaml
+Kimi API 兼容了 OpenAI 的接口规范，你可以使用 OpenAI 提供的 Python 或 NodeJS SDK 来调用和使用 Kimi 大模型，这意味着如果你的应用和服务基于 openai 的模型进行开发，那么只需要将 base_url 和 api_key 替换成 Kimi 大模型的配置，即可无缝将你的应用和服务迁移至使用 Kimi 大模型，代码示例如下：
+```
+```python
+from openai import OpenAI
+ 
+client = OpenAI(
+    api_key = "$MOONSHOT_API_KEY",
+    base_url = "https://api.moonshot.cn/v1",
+)
+ 
+completion = client.chat.completions.create(
+    model = "moonshot-v1-8k",
+    messages = [
+        {"role": "system", "content": "你是 Kimi，由 Moonshot AI 提供的人工智能助手，你更擅长中文和英文的对话。你会为用户提供安全，有帮助，准确的回答。同时，你会拒绝一切涉及恐怖主义，种族歧视，黄色暴力等问题的回答。Moonshot AI 为专有名词，不可翻译成其他语言。"},
+        {"role": "user", "content": "你好，我叫李雷，1+1等于多少？"}
+    ],
+    temperature = 0.3,
+)
+ 
+print(completion.choices[0].message.content)
+```
+
+**得到的信息如下**
+- 1.kimi支持openai接口标准
+- 2.base_url为https://api.moonshot.cn/v1
+
+[申请apikey](https://platform.moonshot.cn/console/api-keys)，得到`sk-pibXoRr***********************vNUq1`
+然后在config/api.yaml中配置
+```yaml
+#这里省略了其他配置项，不代表你可以随便删除其他配置项。
+llm:
+  model: openai #模型大类选择openai。
+  system: "你现在是一只猫娘，你的名字是{bot_name}，我的名字是{用户}，是你的主人。"
+  func_calling: true #kimi支持函数调用功能，可以开启。
+  openai:        
+    api_keys:   #继续像这样添加apikey
+      - sk-pibXoRr***********************vNUq1 #这是个示例，你需要替换为你自己申请的apikey
+    model: moonshot-v1-8k #选择使用的模型，这里是moonshot-v1-8k，其他模型需要查看kimi文档。
+    #在请求地址部分，一般都是base_url+/v1/chat/completions
+    quest_url: https://api.moonshot.cn/v1/chat/completions   #完整调用地址。只填base_url不行
+```
