@@ -141,11 +141,13 @@ ai绘画:
 ```yaml  
 ai绘画:  
   sd画图: true  
-  sd默认启动模型: 'miaomiao_1_4.safetensors'  #【旧版脚本】填noobaiXLNAIXL_vPred10Version.safetensors，【双卡脚本】填miaomiao_1_4.safetensors。  
+  sd默认启动模型: 'noobaiXLNAIXL_vPred10Version.safetensors'  #【旧版脚本】填noobaiXLNAIXL_vPred10Version.safetensors，【双卡脚本】填miaomiao_1_4.safetensors。  
   sd图片是否保存到生图端: false   #是否将生成的图片保存在webui的outputs里  
   novel_ai画图: true  
   no_nsfw_groups:               #禁止色图的群号  
-  - 111  - 222  - 333  
+  - 111  
+  - 222
+  - 333  
 ```  
 重启Eridanus以重载配置文件。   
 至此，在Achernar获取到隧道地址且自动脚本完全启动后(大概需要十分钟)，你应该已经可以在群里使用
