@@ -136,8 +136,8 @@ ai绘画:
   sd审核和反推api: "http://127.0.0.1:3529"  
   nai_key: ""  
 ```  
-### 配置controller
-`config/controller.yaml`
+### 配置settings
+`config/settings.yaml`
 ```yaml  
 ai绘画:  
   sd画图: true  

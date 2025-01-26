@@ -280,7 +280,7 @@ interval = 200  # 压缩间隔时间（秒）
 ```
 usedCkpt和usedCkpt1要保持一致
 
-注意在机器人的配置文件里的controller.yaml里的默认启动模型也要保持一致，否则调用切换模型先花半天
+注意在机器人的配置文件里的settings.yaml里的默认启动模型也要保持一致，否则调用切换模型先花半天
 ```yaml
 ai绘画:
   sd画图: true
