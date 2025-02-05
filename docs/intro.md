@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 # 部署
 接下来的教程将带你部署【Eridanus项目】，【Eridanus项目】已经完成了许多功能。
+
 如果您是使用【Eridanus sdk】的开发者，请移步【教程】。
 
 在你正式开始部署前，建议花两分钟掌握最基本的yaml语法。
