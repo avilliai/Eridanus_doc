@@ -6,7 +6,7 @@ sidebar_position: 1
 
 如果您是使用【Eridanus sdk】的开发者，请移步【教程】。
 
-在你正式开始部署前，建议花两分钟掌握最基本的yaml语法。
+在正式开始部署前，建议你花两分钟掌握最基本的yaml语法。
 - [lesson1 基本yaml语法](https://eridanus-doc.netlify.app/docs/lessons/lesson1) 
 
 ## 1.onebot实现与适配器配置
