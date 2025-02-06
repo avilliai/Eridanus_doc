@@ -2,12 +2,11 @@
 sidebar_position: 1
 ---
 # 部署
-这部分为使用Eridanus的普通用户编写，如果您是开发者，请移步【教程】。
+接下来的教程将带你部署【Eridanus项目】，【Eridanus项目】已经完成了许多功能。
 
-写在前面：
-Eridanus和Manyana一样，使用了大量的yaml文件以为用户提供充分的自定义空间。
+如果您是使用【Eridanus sdk】的开发者，请移步【教程】。
 
-但目前的Eridanus并未制作启动器兼yaml编辑器，为避免您因不熟悉yaml语法而遇到困难，我们制作了一些教程以帮助您更好地使用此项目。
+在正式开始部署前，建议你花两分钟掌握最基本的yaml语法。
 - [lesson1 基本yaml语法](https://eridanus-doc.netlify.app/docs/lessons/lesson1) 
 
 ## 1.onebot实现与适配器配置
