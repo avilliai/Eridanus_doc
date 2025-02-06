@@ -121,7 +121,7 @@ llm:
 proxy:
   http_proxy: "http://127.0.0.1:10809"  #本地代理软件的的http代理端口。
 ```
-### 函数调用与联网搜索
+### 3.函数调用与联网搜索
 并非所有模型都支持这两个功能。在[gemini](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#gemini-2.0-flash) 查看所有模型与模型对应能力
 你可以看到类似下面的内容
 #### Gemini 2.0 Flash
@@ -139,7 +139,8 @@ Gemini 2.0 Flash 提供新一代功能和增强型功能，包括卓越的速度
 | 版本        | 如需了解详情，请参阅[模型版本模式](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#model-versions)。最新电子邮件的接收日期：`gemini-2.0-flash-001` |
 | 最新更新      | 2025 年 2 月                                                                                                                                   |
 | 知识截止分数    | 2024 年 8 月                                                                                                                                   |
-**你可以看到，它支持函数调用和联网搜索**。但这里需要注意，函数调用和联网搜索不能同时开启，否则两个都没法用。
+
+**你可以看到，它支持函数调用和联网搜索**。但这里需要注意，**函数调用和联网搜索不能同时开启，否则两个都没法用**。
 
 于是我们得到了最终配置文件
 ```yaml
