@@ -136,7 +136,7 @@ Gemini 2.0 Flash 提供新一代功能和增强型功能，包括卓越的速度
 | 令牌限制      | **输入令牌限制**：1,048,576，**输出令牌限制**：8192                                                                                                         |
 | 速率限制      | 2,000 RPM，4,000,000 TPM                                                                                                                      |
 | 功能        | **函数调用**：支持，**代码执行**：支持，**搜索**：支持                                                                                                            |
-| 版本        | 如需了解详情，请参阅[模型版本模式](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#model-versions)。<br><br>- 最新电子邮件的接收日期：`gemini-2.0-flash-001` |
+| 版本        | 如需了解详情，请参阅[模型版本模式](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#model-versions)。最新电子邮件的接收日期：`gemini-2.0-flash-001` |
 | 最新更新      | 2025 年 2 月                                                                                                                                   |
 | 知识截止分数    | 2024 年 8 月                                                                                                                                   |
 **你可以看到，它支持函数调用和联网搜索**。但这里需要注意，函数调用和联网搜索不能同时开启，否则两个都没法用。
