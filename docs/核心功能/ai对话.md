@@ -121,7 +121,7 @@ llm:
 proxy:
   http_proxy: "http://127.0.0.1:10809"  #本地代理软件的的http代理端口。
 ```
-### 3.函数调用与联网搜索
+### 3、函数调用与联网搜索
 并非所有模型都支持这两个功能。在[gemini](https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#gemini-2.0-flash) 查看所有模型与模型对应能力
 你可以看到类似下面的内容
 #### Gemini 2.0 Flash
