@@ -34,7 +34,7 @@ llm:
     api_keys:
       - YOUR_API_KEY_1
       - YOUR_API_KEY_2
-    model: gemini-2.0-flash-exp
+    model: gemini-2.0-flash-001
     base_url: https://generativelanguage.googleapis.com #后面的/v1/beta什么的会自动填充
 ```
 ## 函数调用
@@ -84,7 +84,7 @@ llm:
     api_keys:
       - YOUR_API_KEY_1   #这里填入你的apikey，有几个填几个，多key填写示例如下。
       - YOUR_API_KEY_2
-    model: gemini-2.0-flash-exp
+    model: gemini-2.0-flash-001
     base_url: https://generativelanguage.googleapis.com #后面的/v1/beta什么的会自动填充
 ```
 ### 2、配置正向代理/反向代理(二选一)
