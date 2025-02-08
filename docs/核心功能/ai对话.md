@@ -68,7 +68,13 @@ llm:
 如开启函数调用，可直接告诉bot【清理当前对话】
 master也可使用【清理所有人的对话记录】之类的话来清理所有人的对话记录。
 ```
-
+## 多角色卡
+data/system/chara中存放了多个角色模板.txt，你可以继续添加
+```yaml
+/查人设    #预期返回类似 派蒙.txt 猫娘.txt 这样的文件名列表
+/切人设 {角色文件名}  #比如 /切人设 派蒙.txt
+/全切人设 {角色文件名}  #切所有用户的人设
+```
 ## gemini配置方式
 ### 1、获取gemini apikey
 [先获取Gemini apikey](https://ai.google.dev/tutorials/setup?hl=zh-cn) (获取过程需要开启代理，打不开/地区不可用就是你机场不行。)
