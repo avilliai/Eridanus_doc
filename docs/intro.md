@@ -8,6 +8,12 @@ sidebar_position: 1
 
 在正式开始部署前，建议你花两分钟掌握最基本的yaml语法。
 - [lesson1 基本yaml语法](https://eridanus-doc.netlify.app/docs/lessons/lesson1) 
+## 快捷部署
+[linux脚本](https://gitee.com/laixi_lingdun/eridanus_deploy)
+
+[windows整合包](https://github.com/avilliai/Eridanus/releases)
+
+如使用快捷部署部署失败，请参照文档剩余部分部署。
 
 ## 1.onebot实现与适配器配置
 需要开启onebot实现的正向websocket服务。
@@ -41,6 +47,10 @@ git clone --depth 1 https://github.com/avilliai/Eridanus.git
 git clone --depth 1 https://mirror.ghproxy.com/https://github.com/avilliai/Eridanus.git
 其他镜像源(推荐)
 git clone --depth 1 https://github.moeyy.xyz/https://github.com/avilliai/Eridanus.git
+
+git clone --depth 1 https://ghfast.top/https://github.com/avilliai/Eridanus.git
+
+git clone --depth 1 https://gh.llkk.cc/https://github.com/avilliai/Eridanus.git
 ```
 #### python环境
 [下载python3.11](https://mirrors.huaweicloud.com/python/3.11.0/python-3.11.0-amd64.exe)
