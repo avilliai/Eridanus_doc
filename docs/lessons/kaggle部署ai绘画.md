@@ -8,7 +8,7 @@ kaggle每周有30h免费gpu时长，每个脚本一次可以运行12h，所以�
 ## kaggle脚本修改
 **脚本二选一**
 
-**frp和cpolar二选一(建议frp)**
+**frp和cpolar二选一**
 
 [双卡脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner) 建议使用。
 
@@ -149,9 +149,9 @@ ai绘画:
 ```yaml  
 ai绘画:  
   sd画图: true  
-  sd默认启动模型: 'noobaiXLNAIXL_vPred10Version.safetensors'  #【旧版脚本】填noobaiXLNAIXL_vPred10Version.safetensors，【双卡脚本】填miaomiao_1_4.safetensors。  
+  sd默认启动模型: 'noobaiXLNAIXL_vPred10Version.safetensors'  #底模。你可以改成miaomiao_1_4.safetensors。  
   sd图片是否保存到生图端: false   #是否将生成的图片保存在webui的outputs里  
-  novel_ai画图: true  
+  novel_ai画图: false  
   no_nsfw_groups:               #禁止色图的群号  
   - 111  
   - 222
