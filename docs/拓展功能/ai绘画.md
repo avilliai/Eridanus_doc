@@ -55,10 +55,12 @@ setre xxxx   #设置重绘参数
 ```yaml
 /clearre
 ```
-### 模型查询指令
+### 查询指令
 ```yaml
 lora
-ckpt 
+ckpt
+scheduler
+sampler
 ```
 ### 切换模型
 ```yaml
@@ -71,6 +73,11 @@ dan {你要查的tag，可以是各种语言}
 ### 获取抽卡可用词条(具体用法后面会讲)
 ```yaml
 getwd
+```
+### 中断与跳过(master可用)
+```yaml
+interrupt  # 中断当前任务
+skip   # 把当前任务的结果直接发出来
 ```
 ## 云部署ai绘画服务(必看)
 利用kaggle的免费算力，部署ai绘画服务。
