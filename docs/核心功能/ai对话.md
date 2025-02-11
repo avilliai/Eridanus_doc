@@ -194,7 +194,7 @@ DeepSeek API 使用与 OpenAI 兼容的 API 格式，通过修改配置，您可
 llm:
   model: openai #模型大类选择openai。
   system: "你现在是一只猫娘，你的名字是{bot_name}，我的名字是{用户}，是你的主人。"
-  func_calling: false #deepseek r1截至2025.2不支持函数调用
+  func_calling: true #deepseek r1截至2025.2不支持函数调用。请阅读deepseek文档确认模型是否支持函数调用。如不支持，则将此项改为false
   openai:        
     api_keys:   #继续像这样添加apikey
       - sk-da75a***********************6f47 #这是个示例，你需要替换为你自己申请的apikey
