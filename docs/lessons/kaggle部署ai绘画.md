@@ -6,13 +6,13 @@ kaggle每周有30h免费gpu时长，每个脚本一次可以运行12h，所以�
 
 [kaggle注册](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner)，记得`在profile界面`  **绑定手机号**，不然用不了gpu和联网。
 ## kaggle脚本修改
-**脚本二选一(建议旧版脚本)**
+**脚本二选一**
 
-**frp和cpolar二选一(建议frp)**
+**frp和cpolar二选一**
 
-[双卡脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner) 【速度】快，双卡并用榨干kaggle，均衡负载，出图较快。
+[双卡脚本](https://www.kaggle.com/code/spawnerqwq/qqbot-simple-reforge-spawner) 建议使用。
 
-[旧版脚本](https://www.kaggle.com/code/lzrea06/qqbot-simple-reforge-spawner-bfef6d) 【稳定】，默认加载模型绘图效果好，出图较慢。
+[旧版脚本](https://www.kaggle.com/code/lzrea06/qqbot-simple-reforge-spawner-bfef6d) 旧版脚本
 ### 使用frp
 免费frp有很多，以[chml](https://panel.chmlfrp.cn/tunnelm/manage)为例。在其官网注册登录，并完成实名验证(怕个人信息泄漏的换别的frp服务也行，流程基本一样)。
 ![fc8578c69e33882d300b258902051516.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/fc8578c69e33882d300b258902051516.png)
@@ -149,9 +149,9 @@ ai绘画:
 ```yaml  
 ai绘画:  
   sd画图: true  
-  sd默认启动模型: 'noobaiXLNAIXL_vPred10Version.safetensors'  #【旧版脚本】填noobaiXLNAIXL_vPred10Version.safetensors，【双卡脚本】填miaomiao_1_4.safetensors。  
+  sd默认启动模型: 'noobaiXLNAIXL_vPred10Version.safetensors'  #底模。你可以改成miaomiao_1_4.safetensors。  
   sd图片是否保存到生图端: false   #是否将生成的图片保存在webui的outputs里  
-  novel_ai画图: true  
+  novel_ai画图: false  
   no_nsfw_groups:               #禁止色图的群号  
   - 111  
   - 222

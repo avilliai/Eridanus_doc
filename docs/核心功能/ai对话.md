@@ -65,15 +65,18 @@ llm:
 ## 清理对话
 ```yaml
 /clear
+/clear@某人      # 主人功能
+/clearall      # 主人功能
 如开启函数调用，可直接告诉bot【清理当前对话】
 master也可使用【清理所有人的对话记录】之类的话来清理所有人的对话记录。
 ```
-## 多角色卡
-data/system/chara中存放了多个角色模板.txt，你可以继续添加
+## 多人设
+data/system/chara中存放了多个角色模板，你可以继续添加(已兼容txt,json,酒馆角色卡(图片格式))
 ```yaml
 /查人设    #预期返回类似 派蒙.txt 猫娘.txt 这样的文件名列表
 /切人设 {角色文件名}  #比如 /切人设 派蒙.txt
-/全切人设 {角色文件名}  #切所有用户的人设
+/全切人设 {角色文件名}  #切所有用户的人设，主人功能
+# 可以使用/切人设 0或/全切人设 0来恢复到默认人设
 ```
 ## gemini配置方式
 ### 1、获取gemini apikey
@@ -191,7 +194,7 @@ DeepSeek API 使用与 OpenAI 兼容的 API 格式，通过修改配置，您可
 llm:
   model: openai #模型大类选择openai。
   system: "你现在是一只猫娘，你的名字是{bot_name}，我的名字是{用户}，是你的主人。"
-  func_calling: false #deepseek r1截至2025.2不支持函数调用
+  func_calling: true #deepseek r1截至2025.2不支持函数调用。请阅读deepseek文档确认模型是否支持函数调用。如不支持，则将此项改为false
   openai:        
     api_keys:   #继续像这样添加apikey
       - sk-da75a***********************6f47 #这是个示例，你需要替换为你自己申请的apikey
