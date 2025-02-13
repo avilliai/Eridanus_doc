@@ -78,6 +78,17 @@ data/system/chara中存放了多个角色模板，你可以继续添加(已兼�
 /全切人设 {角色文件名}  #切所有用户的人设，主人功能
 # 可以使用/切人设 0或/全切人设 0来恢复到默认人设
 ```
+## 群聊上下文读取
+```yaml
+llm:
+  读取群聊上下文: false  #开启上下文读取功能，可读取群聊历史消息，并根据上下文进行回复。
+  可获取的群聊上下文长度: 10
+```
+清理指令为
+```yaml
+/clear group
+```
+慎用，清理群消息记录会导致词云功能丢失数据。
 ## gemini配置方式
 ### 1、获取gemini apikey
 [先获取Gemini apikey](https://ai.google.dev/tutorials/setup?hl=zh-cn) (获取过程需要开启代理，打不开/地区不可用就是你机场不行。)
@@ -201,6 +212,8 @@ llm:
     model: deepseek-chat #选择使用的模型，这里是deepseek-chat，其他模型需要查看deepseek文档。
     #在请求地址部分，一般都是base_url+/v1/chat/completions
     quest_url: https://api.deepseek.com/v1/chat/completions   #完整调用地址。只填base_url不行
+    CoT: false               #显示思维链
+    使用旧版prompt结构: false  #官网版deepseek-reasoner需要使用旧版prompt结构
 ```
 假如存在网络问题需要配置代理，请查阅【gemini配置正向代理】，这里是通用的。
 ### 接入kimi
