@@ -317,3 +317,11 @@ ai绘画:
 --cfg 6.5     # 提示词引导系数
 --nai-cfg 5    # 提示词引导系数(nai)
 ```
+
+## 反推与审核用模型相关
+```yaml
+反推和审核使用模型可选:'wd14-vit-v2-git'，'wd14-convnext-v2-git'，'wd14-swinv2-v2-git'，'wd-vit-v3-git'，'wd14-convnext-v3-git'，
+'wd14-swinv2-v3-git'，'wd14-large-v3-git'，'wd14-eva02-large-v3-git'
+前提是你安装的插件是spawner1145的https://github.com/spawner1145/stable-diffusion-webui-wd14-tagger.git
+否则只能使用'wd14-vit-v2-git'
+```
