@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Eridanus文档',
-  tagline: '轻量化的onebot v11 python sdk',
+  tagline: 'onebot标准的多功能bot',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
