@@ -182,9 +182,9 @@ getwd xxx # 你给一串提示词，还给你抽卡处理过后的句子
 
 变为
 
-[abcd]https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d
+abcd.safetensors@https://civitai.com/api/download/models/1190596?type=Model&format=SafeTensor&size=full&fp=bf16&token=aeb1d64b7c43f84ed1a131ba5bb9b40d
 
-从而将下载下来的文件命名为abcd（所以要注意重命名时后缀名！！！）
+从而将下载下来的文件命名为abcd.safetensors（所以要注意重命名时后缀名！！！）
 
 在这里你可以更改你默认启动加载的模型和一些别的启动参数，自己探索吧
 ![image](https://github.com/user-attachments/assets/68addd0e-bd1e-49f4-8762-3ee83d62e395)
