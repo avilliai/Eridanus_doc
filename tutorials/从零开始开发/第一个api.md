@@ -47,7 +47,7 @@ bot = WebSocketBot('ws://127.0.0.1:3001')
 
 @bot.on(GroupMessageEvent)
 async def _(event: GroupMessageEvent):
-    if event.raw_message=="柴郡":
+    if event.pure_text=="柴郡":
         bot.logger.info("找一张柴郡表情包!")
         path=await chaijun()
         await bot.send(event,Image(file=path))
