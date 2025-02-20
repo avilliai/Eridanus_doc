@@ -58,12 +58,12 @@ sidebar_position: 2
 ```
 解析它实在令人头大，为了更方便地构建消息组件和解析消息组件，我们引入了 消息链（MessageChain）的概念。。
 
-**消息链会将消息列表分解为多个消息组件对象，使你能够更加方便地处理消息内容。**
+**消息链会将消息列表各元素转变为对应消息组件对象，使你能够更加方便地处理消息内容。**
 
 消息链的结构如下：
 ```yaml
-[Text(comp_type='text', text='呷玛日巴今天的运势是：'), 
-Image(comp_type='image', file='file://D:/python/Eridanus/DF3851D38B81705C040377464385D3F5.jpg', url='https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=EhQm6tFO_dvhCm7uGARda2ccMEu7zBienS4g_woowfajr8fPiwMyBHByb2RQgL2jAVoQMssHxFAPRYs3PCDsQfgsxg&spec=0&rkey=CAISKKSBekjVG1fMrpFoAHgCdk_rDNx6mxVmATYCwsRJAXzZEhK2xjkUl_M', type='')
+[Text(comp_type='text', text='你好'), 
+Image(comp_type='image', file='xxx.jpg', url='https://xxx.jpg', file_size='12345')
 ]
 ```
 消息组件变成了相应的对象，你可以通过属性和方法来获取消息组件的具体信息。

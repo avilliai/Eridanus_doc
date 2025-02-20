@@ -20,6 +20,10 @@ JM下载1046487
 ```yaml
 jm搜{关键字}
 ```
+### 函数调用
+```yaml
+直接告诉bot你要验车或者下载，或者搜索就可以了。
+```
 ## asmr功能
 需要安装ffmepg，并配置好环境变量。
 
@@ -35,7 +39,6 @@ napcat和llob都有配置卡片签名的地方，自己找。
 最新asmr
 热门asmr
 ```
-该功能支持函数调用，你可以直接告诉bot你想听asmr。
 ### 配置
 `config/settings.yaml`
 ```yaml
@@ -50,6 +53,10 @@ asmr:
 resource_search:   #资源搜索功能
   asmr:
     asmr_level: 0  #设置权限。
+```
+### 函数调用
+```yaml
+帮我下载https://asmr.one/work/RJ01275524
 ```
 ## iwara功能
 ```yaml
