@@ -205,15 +205,16 @@ DeepSeek API 使用与 OpenAI 兼容的 API 格式，通过修改配置，您可
 llm:
   model: openai #模型大类选择openai。
   system: "你现在是一只猫娘，你的名字是{bot_name}，我的名字是{用户}，是你的主人。"
-  func_calling: true #deepseek r1截至2025.2不支持函数调用。请阅读deepseek文档确认模型是否支持函数调用。如不支持，则将此项改为false
-  openai:        
+  func_calling: false #deepseek r1截至2025.2不支持函数调用。请阅读deepseek文档确认模型是否支持函数调用。如不支持，则将此项改为false
+  openai:
+    enable_official_sdk: True   #是否使用官方sdk，如果不使用，则为直接发送post请求。
     api_keys:   #继续像这样添加apikey
-      - sk-da75a***********************6f47 #这是个示例，你需要替换为你自己申请的apikey
-    model: deepseek-chat #选择使用的模型，这里是deepseek-chat，其他模型需要查看deepseek文档。
-    #在请求地址部分，一般都是base_url+/v1/chat/completions
-    quest_url: https://api.deepseek.com/v1/chat/completions   #完整调用地址。只填base_url不行
-    CoT: false               #显示思维链
-    使用旧版prompt结构: false  #官网版deepseek-reasoner需要使用旧版prompt结构
+      - YOUR_API_KEY_1
+    model: deepseek-reasoner
+    quest_url: https://api.deepseek.com   #如使用官方sdk，则只填base_url，否则填完整url。
+    temperature: 1.3
+    max_tokens: 2048
+    CoT: True  
 ```
 假如存在网络问题需要配置代理，请查阅【gemini配置正向代理】，这里是通用的。
 ### 接入kimi
