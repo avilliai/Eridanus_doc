@@ -214,7 +214,8 @@ llm:
     quest_url: https://api.deepseek.com   #如使用官方sdk，则只填base_url，否则填完整url。
     temperature: 1.3
     max_tokens: 2048
-    CoT: True  
+    CoT: false               #显示思维链
+    使用旧版prompt结构: false  #部分模型需要使用旧版prompt结构
 ```
 假如存在网络问题需要配置代理，请查阅【gemini配置正向代理】，这里是通用的。
 ### 接入kimi
