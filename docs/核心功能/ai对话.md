@@ -184,7 +184,7 @@ llm:
 
 兼容openai接口标准的模型配置方式都是大差不差。
 ### 接入deepseek
-在开始之前，你需要知道，eridanus所依赖的llm核心功能——函数调用，在deepseek的模型中要么没有，要么一坨(截至2025.3.5)，如果你坚持要用deepseek的模型，那就关掉函数调用，以免白白浪费你的apikey余额。
+在开始之前，你需要知道，eridanus所依赖的llm功能——函数调用，在deepseek的系列模型中要么没有，要么一坨(截至2025.3.5)，如果你坚持要用deepseek的模型，那就关掉函数调用，以免白白浪费你的apikey余额。
 
 在[deepseek文档](https://api-docs.deepseek.com/zh-cn/)我们可以看到
 ```yaml
