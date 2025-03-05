@@ -90,6 +90,7 @@ llm:
 ```
 慎用，清理群消息记录会导致词云功能丢失数据。
 ## gemini配置方式
+gemini系列是我们最推荐的模型，足量免费配额每日刷新，且在各方面表现都较为出色。
 ### 1、获取gemini apikey
 [先获取Gemini apikey](https://ai.google.dev/tutorials/setup?hl=zh-cn) (获取过程需要开启代理，打不开/地区不可用就是你机场不行。)
 
@@ -183,6 +184,8 @@ llm:
 
 兼容openai接口标准的模型配置方式都是大差不差，每个都写就是纯纯浪费时间，接下来教程以deepseek为例，希望你能够举一反三。
 ### 接入deepseek
+在开始之前，你需要知道deepseek的模型，截止2025.3.5，函数调用要么没有，要么做的一坨，甚至不如隔壁的4omini，如果你坚持要用deepseek的模型，那就关掉函数调用，以免白白浪费你的tokens余额。
+
 在[deepseek文档](https://api-docs.deepseek.com/zh-cn/)我们可以看到
 ```yaml
 DeepSeek API 使用与 OpenAI 兼容的 API 格式，通过修改配置，您可以使用 OpenAI SDK 来访问 DeepSeek API，或使用与 OpenAI API 兼容的软件。
