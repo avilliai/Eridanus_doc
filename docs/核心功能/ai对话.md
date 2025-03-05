@@ -182,9 +182,9 @@ llm:
 ## openai接口标准模型配置方式
 文心、讯飞星火、chatglm、豆包、kimi都可以使用此配置方式
 
-兼容openai接口标准的模型配置方式都是大差不差，每个都写就是纯纯浪费时间，接下来教程以deepseek为例，希望你能够举一反三。
+兼容openai接口标准的模型配置方式都是大差不差。
 ### 接入deepseek
-在开始之前，你需要知道deepseek的模型，截止2025.3.5，函数调用要么没有，要么做的一坨，甚至不如隔壁的4omini，如果你坚持要用deepseek的模型，那就关掉函数调用，以免白白浪费你的tokens余额。
+在开始之前，你需要知道deepseek的模型要么没有函数调用，要么做的一坨(截至2025.3.5)，甚至不如隔壁的4omini，如果你坚持要用deepseek的模型，那就关掉函数调用，以免白白浪费你的tokens余额。
 
 在[deepseek文档](https://api-docs.deepseek.com/zh-cn/)我们可以看到
 ```yaml
