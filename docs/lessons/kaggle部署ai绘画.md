@@ -19,11 +19,12 @@ kaggle每周有30h免费gpu时长，每个脚本一次可以运行12h，所以�
 ![image.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/20250126101517.png)
 
 ![image.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/20250126101914.png)
-好的，你现在得到了frp配置文件，它看起来如上图，让我们回到kaggle。
+
+好的，你现在得到了frp配置文件，它看起来如上图(图炸了挂梯子刷新)，让我们回到kaggle。
 
 打开【脚本】后，点击白色的copy&edit，跳转到新页面后你可以看到：  
 ![image.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/20250126102141.png)
-用你刚刚复制的配置文件内容替换掉这一坨。
+用你刚刚复制的配置文件内容替换掉这一坨。双卡脚本需要把配置文件拆成两份粘贴。
 
 让我们回到chml，**在【隧道列表】记录【连接地址】**
 ![image.png](https://raw.githubusercontent.com/avilliai/imgBed/master/images/20250126102449.png)
@@ -85,7 +86,7 @@ git clone --depth 1 https://github.moeyy.xyz/https://github.com/avilliai/Acherna
 ### 安装python
 [安装python3.11](https://mirrors.huaweicloud.com/python/3.11.0/python-3.11.0-amd64.exe)
 
-记住第一步勾选add to path就行了，剩下全默认。
+记住第一步勾选add to path，剩下全默认。
 ### 安装依赖
 运行`一键部署脚本.bat`
 
