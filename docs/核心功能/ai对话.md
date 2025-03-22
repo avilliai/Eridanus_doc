@@ -113,15 +113,6 @@ llm:
 #### 反向代理
 反向代理配置难度较低，建议使用。
 ```yaml
-一些你可以使用的反代地址，可能因使用人数过多而失效。
-https://dainty-liger-d8726e.netlify.app
-https://calm-taiyaki-bb86b0.netlify.app
-https://inspiring-piroshki-716f76.netlify.app
-https://fbsvilli.netlify.app
-https://mellifluous-cupcake-ea08ad.netlify.app
-https://fsadfafsfdsafsa.netlify.app
-https://voluble-frangipane-db8db1.netlify.app
-
 建议搭建自己的反向代理，自行查看https://simonmy.com/posts/%E4%BD%BF%E7%94%A8netlify%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86google-palm-api.html
 你也可以去我们的q群913122269获取最新的反代
 ```
@@ -132,7 +123,7 @@ llm:
   system: "你现在是一只猫娘，你的名字是{bot_name}，我的名字是{用户}，是你的主人。"
   enable_proxy: False
   gemini:    
-    base_url: https://mellifluous-cupcake-ea08ad.netlify.app  #可能失效，见上面
+    base_url: 反代地址  #参照上文搭建或在我们的群里获取
 ```
 #### 正向代理
 取决于你自己的代理软件，我不能给你一个准确答案。如果你看不懂就老老实实用反代。
