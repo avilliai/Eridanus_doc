@@ -132,7 +132,7 @@ llm:
   system: "你现在是一只猫娘，你的名字是{bot_name}，我的名字是{用户}，是你的主人。"
   enable_proxy: False
   gemini:    
-    base_url: https://mellifluous-cupcake-ea08ad.netlify.app  #填写了一个反代地址
+    base_url: https://mellifluous-cupcake-ea08ad.netlify.app  #可能失效，见上面
 ```
 #### 正向代理
 取决于你自己的代理软件，我不能给你一个准确答案。如果你看不懂就老老实实用反代。
