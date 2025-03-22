@@ -113,7 +113,7 @@ llm:
 #### 反向代理
 反向代理配置难度较低，建议使用。
 ```yaml
-一些你可以使用的反代地址，不保证全都能用。
+一些你可以使用的反代地址，可能因使用人数过多而失效。
 https://dainty-liger-d8726e.netlify.app
 https://calm-taiyaki-bb86b0.netlify.app
 https://inspiring-piroshki-716f76.netlify.app
@@ -122,7 +122,8 @@ https://mellifluous-cupcake-ea08ad.netlify.app
 https://fsadfafsfdsafsa.netlify.app
 https://voluble-frangipane-db8db1.netlify.app
 
-如果你想要搭建自己的反向代理，自行查看https://simonmy.com/posts/%E4%BD%BF%E7%94%A8netlify%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86google-palm-api.html。
+建议搭建自己的反向代理，自行查看https://simonmy.com/posts/%E4%BD%BF%E7%94%A8netlify%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86google-palm-api.html
+你也可以去我们的q群913122269获取最新的反代
 ```
 ```yaml
 #省略了其他配置项，不代表你可以随便删除其他配置项。
