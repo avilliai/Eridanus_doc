@@ -11,5 +11,5 @@ sidebar_position: 1
 from developTools.adapters.websocket_adapter import WebSocketBot
 
 ```
-并没有太大区别。这方面内容请查看【关于SDK】章节。
+并没有太大区别。这方面内容请查看【关于SDK】章节
 
