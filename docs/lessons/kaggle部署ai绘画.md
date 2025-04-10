@@ -1,4 +1,4 @@
----
+![QQ20250410-220311](https://github.com/user-attachments/assets/f82e603c-862a-4c1f-9ceb-0f8afcf70c59)---
 sidebar_position: 1
 ---
 # kaggle部署ai绘画服务
@@ -167,3 +167,15 @@ tag    #反推图片prompt
 ```
 
 Achernar的原型脚本和kaggle脚本均来自[spawner](https://github.com/spawner1145)
+
+## 如果不想部署Achernar
+- 找到右上角的save versions并点击
+![QQ20250410-220212](https://github.com/user-attachments/assets/bc46ccf6-7d01-48c6-88ba-dc8e4515e686)
+- 按照图里的设置选择并点击save
+![QQ20250410-220243](https://github.com/user-attachments/assets/8ab24516-7d03-4e32-87b8-d36c7cb9be6e)
+- 可以发现左下角出现了黄色标记，这代表着代码开始运行了
+![QQ20250410-220311](https://github.com/user-attachments/assets/1e29546e-aace-4ad3-adee-8e897d7fd6b9)
+- 点击那个地方，再点击出来的三个小圆点，你可以看到`open logs in viewer`的选项，点击它可以进入控制台查看代码当前运行的状态
+![QQ20250410-220318](https://github.com/user-attachments/assets/7c0927ae-b5f6-4b73-9028-0b7d4b36dd2c)
+- 当你看到`running on local url`这样的字眼时，说明webui已经启动，这个时候如果你开了内网穿透，就可以使用ai画图了
+![QQ20250410-220441](https://github.com/user-attachments/assets/e12e648f-1e45-493b-99f7-c088a65524f2)
