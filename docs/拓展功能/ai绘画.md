@@ -10,6 +10,7 @@ ai绘画:
     - '' #你自己搭建的sd，地址，示例http://127.0.0.1:3529（示例≠你能直接填示例用），部署https://www.bilibili.com/video/BV1iM4y1y7oA/'' 
   sd审核和反推api: ''        # 如果你的sd有反推插件https://github.com/spawner1145/stable-diffusion-webui-wd14-tagger.git，可以直接使用你的sdurl的api
   nai_key: ''
+# 注意，假设你的webui启动时设置了--api-auth 账号:密码 参数，那么假设你的sdapi是"http://127.0.0.1:7860"，改成 "http://127.0.0.1:7860 账号:密码" 这种格式
 ```
 ## 指令
 ### novel_ai绘图指令
